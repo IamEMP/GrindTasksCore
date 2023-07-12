@@ -52,6 +52,9 @@
 		D972464D2A5F467200005C9A /* Grind Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				D972465F2A5F471C00005C9A /* Models */,
+				D972465E2A5F471600005C9A /* ViewModel */,
+				D972465D2A5F470E00005C9A /* View */,
 				D972464E2A5F467200005C9A /* Grind_TasksApp.swift */,
 				D97246502A5F467200005C9A /* ContentView.swift */,
 				D97246522A5F467200005C9A /* Assets.xcassets */,
@@ -67,6 +70,27 @@
 				D97246562A5F467200005C9A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D972465D2A5F470E00005C9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D972465E2A5F471600005C9A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D972465F2A5F471C00005C9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
