@@ -11,6 +11,8 @@
 		D97246512A5F467200005C9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97246502A5F467200005C9A /* ContentView.swift */; };
 		D97246532A5F467200005C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97246522A5F467200005C9A /* Assets.xcassets */; };
 		D97246572A5F467200005C9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97246562A5F467200005C9A /* Preview Assets.xcassets */; };
+		D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D97246602A5F47A500005C9A /* Main.xcdatamodeld */; };
+		D97246642A5F4A1100005C9A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97246632A5F4A1100005C9A /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		D97246522A5F467200005C9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D97246542A5F467200005C9A /* Grind_Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Grind_Tasks.entitlements; sourceTree = "<group>"; };
 		D97246562A5F467200005C9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D97246612A5F47A500005C9A /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		D97246632A5F4A1100005C9A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		D97246652A60551300005C9A /* Grind-Tasks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Grind-Tasks-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +57,12 @@
 		D972464D2A5F467200005C9A /* Grind Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				D97246652A60551300005C9A /* Grind-Tasks-Info.plist */,
 				D972465F2A5F471C00005C9A /* Models */,
 				D972465E2A5F471600005C9A /* ViewModel */,
 				D972465D2A5F470E00005C9A /* View */,
 				D972464E2A5F467200005C9A /* Grind_TasksApp.swift */,
-				D97246502A5F467200005C9A /* ContentView.swift */,
+				D97246602A5F47A500005C9A /* Main.xcdatamodeld */,
 				D97246522A5F467200005C9A /* Assets.xcassets */,
 				D97246542A5F467200005C9A /* Grind_Tasks.entitlements */,
 				D97246552A5F467200005C9A /* Preview Content */,
@@ -75,6 +81,7 @@
 		D972465D2A5F470E00005C9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D97246502A5F467200005C9A /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,6 +96,7 @@
 		D972465F2A5F471C00005C9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D97246632A5F4A1100005C9A /* DataController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */,
+				D97246642A5F4A1100005C9A /* DataController.swift in Sources */,
 				D97246512A5F467200005C9A /* ContentView.swift in Sources */,
 				D972464F2A5F467200005C9A /* Grind_TasksApp.swift in Sources */,
 			);
@@ -293,6 +303,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Grind-Tasks-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -331,6 +342,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Grind-Tasks-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -378,6 +390,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D97246602A5F47A500005C9A /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D97246612A5F47A500005C9A /* Main.xcdatamodel */,
+			);
+			currentVersion = D97246612A5F47A500005C9A /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D97246432A5F467200005C9A /* Project object */;
 }
