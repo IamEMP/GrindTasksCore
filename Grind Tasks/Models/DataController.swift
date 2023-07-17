@@ -10,28 +10,29 @@ import CoreData
 
 class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
-    
+
+    @Published var selectedFilter: Filter? = Filter.all
+
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
         dataController.createSampleData()
         return dataController
     }()
-    
+
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Main")
-        
-        
+
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(filePath: "/dev/null")
         }
-        
+
         container.loadPersistentStores { storeDescription, error in
             if let error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
-            
         }
     }
+
     
     func createSampleData() {
         let viewContext = container.viewContext

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91683002A61878000FD88AA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91682FF2A61878000FD88AA /* BackgroundView.swift */; };
+		D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */; };
+		D91A90242A65A78900EFBE74 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */; };
+		D938450E2A617D760041AE1C /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450D2A617D760041AE1C /* SidebarView.swift */; };
+		D93845102A617DAF0041AE1C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450F2A617DAF0041AE1C /* DetailView.swift */; };
+		D93845122A617EA10041AE1C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93845112A617EA10041AE1C /* Filter.swift */; };
 		D972464F2A5F467200005C9A /* Grind_TasksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972464E2A5F467200005C9A /* Grind_TasksApp.swift */; };
 		D97246512A5F467200005C9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97246502A5F467200005C9A /* ContentView.swift */; };
 		D97246532A5F467200005C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97246522A5F467200005C9A /* Assets.xcassets */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D91682FF2A61878000FD88AA /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D938450D2A617D760041AE1C /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		D938450F2A617DAF0041AE1C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D93845112A617EA10041AE1C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		D972464B2A5F467200005C9A /* Grind Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grind Tasks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D972464E2A5F467200005C9A /* Grind_TasksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grind_TasksApp.swift; sourceTree = "<group>"; };
 		D97246502A5F467200005C9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				D97246502A5F467200005C9A /* ContentView.swift */,
+				D938450D2A617D760041AE1C /* SidebarView.swift */,
+				D938450F2A617DAF0041AE1C /* DetailView.swift */,
+				D91682FF2A61878000FD88AA /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				D97246632A5F4A1100005C9A /* DataController.swift */,
+				D93845112A617EA10041AE1C /* Filter.swift */,
+				D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */,
+				D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,8 +189,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93845122A617EA10041AE1C /* Filter.swift in Sources */,
+				D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */,
 				D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */,
+				D91683002A61878000FD88AA /* BackgroundView.swift in Sources */,
+				D93845102A617DAF0041AE1C /* DetailView.swift in Sources */,
 				D97246642A5F4A1100005C9A /* DataController.swift in Sources */,
+				D938450E2A617D760041AE1C /* SidebarView.swift in Sources */,
+				D91A90242A65A78900EFBE74 /* Tag-CoreDataHelpers.swift in Sources */,
 				D97246512A5F467200005C9A /* ContentView.swift in Sources */,
 				D972464F2A5F467200005C9A /* Grind_TasksApp.swift in Sources */,
 			);
