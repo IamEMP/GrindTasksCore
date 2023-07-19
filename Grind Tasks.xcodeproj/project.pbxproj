@@ -19,6 +19,7 @@
 		D97246572A5F467200005C9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97246562A5F467200005C9A /* Preview Assets.xcassets */; };
 		D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D97246602A5F47A500005C9A /* Main.xcdatamodeld */; };
 		D97246642A5F4A1100005C9A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97246632A5F4A1100005C9A /* DataController.swift */; };
+		D9A02FBB2A65D50A007ABF2B /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A02FBA2A65D50A007ABF2B /* TaskRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D97246612A5F47A500005C9A /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		D97246632A5F4A1100005C9A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D97246652A60551300005C9A /* Grind-Tasks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Grind-Tasks-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D9A02FBA2A65D50A007ABF2B /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				D938450D2A617D760041AE1C /* SidebarView.swift */,
 				D938450F2A617DAF0041AE1C /* DetailView.swift */,
 				D91682FF2A61878000FD88AA /* BackgroundView.swift */,
+				D9A02FBA2A65D50A007ABF2B /* TaskRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				D93845122A617EA10041AE1C /* Filter.swift in Sources */,
 				D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */,
+				D9A02FBB2A65D50A007ABF2B /* TaskRowView.swift in Sources */,
 				D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */,
 				D91683002A61878000FD88AA /* BackgroundView.swift in Sources */,
 				D93845102A617DAF0041AE1C /* DetailView.swift in Sources */,

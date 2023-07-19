@@ -25,12 +25,21 @@ class DataController: ObservableObject {
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(filePath: "/dev/null")
         }
+        
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+        NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange, object: container.persistentStoreCoordinator, queue: .main, using: remoteStoreChanged)
 
         container.loadPersistentStores { storeDescription, error in
             if let error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
         }
+    }
+    
+    func remoteStoreChanged(_ notification: Notification) {
+        objectWillChange.send()
     }
 
     
@@ -45,8 +54,8 @@ class DataController: ObservableObject {
             for j in 1...10 {
                 let task = TaskItem(context: viewContext)
                 task.title = "Task \(i) - \(j)"
+                task.assignedDate = .now
                 task.content = "Description for tasks goes here!"
-                task.creationDate = .now
                 task.completed = Bool.random()
                 task.scheduleTime = Bool.random()
                 tag.addToTasks(task)
