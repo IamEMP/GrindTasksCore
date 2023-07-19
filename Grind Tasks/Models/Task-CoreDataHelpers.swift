@@ -20,12 +20,8 @@ extension TaskItem {
         set { content = newValue }
     }
 
-    var taskCreationDate: Date {
-        creationDate ?? .now
-    }
-
-    var taskModificationDate: Date {
-        modifiedDate ?? .now
+    var taskAssignedDate: Date {
+        assignedDate ?? .now
     }
     
     var taskScheduleTime: Bool {
@@ -45,7 +41,7 @@ extension TaskItem {
         task.title = "Example Issue"
         task.content = "This is an example issue."
         task.completed = Bool.random()
-        task.creationDate = .now
+        task.assignedDate = .now
         task.scheduleTime = false
         return task
     }
@@ -58,7 +54,7 @@ extension TaskItem: Comparable {
         let right = rhs.taskTitle.localizedLowercase
 
         if left == right {
-            return lhs.taskCreationDate < rhs.taskCreationDate
+            return lhs.taskAssignedDate < rhs.taskAssignedDate
         } else {
             return left < right
         }

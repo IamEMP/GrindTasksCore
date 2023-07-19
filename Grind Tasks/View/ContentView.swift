@@ -8,14 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    @EnvironmentObject var dataController: DataController
+    
+    var tasks: [TaskItem] {
+        let filter = dataController.selectedFilter ?? .all
+        var allTasks: [TaskItem]
+
+        if let tag = filter.tag {
+            allTasks = tag.tasks?.allObjects as? [TaskItem] ?? []
+        } else {
+            let request = TaskItem.fetchRequest()
+            request.predicate = NSPredicate(format: "assignedDate > %@", filter.minAssignedDate as NSDate)
+            allTasks = (try? dataController.container.viewContext.fetch(request)) ?? []
         }
-        .padding()
+
+        return allTasks.sorted()
+    }
+    
+    var body: some View {
+        List {
+            ForEach(tasks) { task in
+                TaskRowView(tasks: task)
+            }
+            .onDelete(perform: delete)
+        }
+        .navigationTitle("Tasks")
+    }
+    
+    func delete(_ offsets: IndexSet) {
+        for offset in offsets {
+            let item = tasks[offset]
+            dataController.delete(item)
+        }
     }
 }
 
