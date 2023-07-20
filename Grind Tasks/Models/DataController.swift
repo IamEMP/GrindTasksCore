@@ -12,6 +12,7 @@ class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
 
     @Published var selectedFilter: Filter? = Filter.all
+    @Published var selectedTask: TaskItem?
 
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -56,7 +57,7 @@ class DataController: ObservableObject {
                 task.title = "Task \(i) - \(j)"
                 task.assignedDate = .now
                 task.content = "Description for tasks goes here!"
-                task.completed = Bool.random()
+                task.completed = false
                 task.scheduleTime = Bool.random()
                 tag.addToTasks(task)
             }
@@ -94,5 +95,15 @@ class DataController: ObservableObject {
         delete(request2)
 
         save()
+    }
+    
+    func missingTags(from task: TaskItem) -> [Tag] {
+        let request = Tag.fetchRequest()
+        let allTags = (try? container.viewContext.fetch(request)) ?? []
+
+        let allTagsSet = Set(allTags)
+        let difference = allTagsSet.symmetricDifference(task.taskTags)
+
+        return difference.sorted()
     }
 }

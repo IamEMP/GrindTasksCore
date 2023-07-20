@@ -26,7 +26,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        List {
+        List(selection: $dataController.selectedTask) {
             ForEach(tasks) { task in
                 TaskRowView(tasks: task)
             }

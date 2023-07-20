@@ -32,7 +32,7 @@ struct TaskRowView: View {
                         .font(.headline)
                         .lineLimit(1)
 
-                    Text("No tags")
+                    Text(tasks.taskTagsList)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
@@ -44,7 +44,7 @@ struct TaskRowView: View {
                         .font(.subheadline)
 
                     if tasks.completed {
-                        Text("CLOSED")
+                        Text("Completed")
                             .font(.body.smallCaps())
                     }
                 }
