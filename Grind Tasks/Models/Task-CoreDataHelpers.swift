@@ -21,7 +21,8 @@ extension TaskItem {
     }
 
     var taskAssignedDate: Date {
-        assignedDate ?? .now
+        get { assignedDate ?? .now }
+        set { assignedDate = newValue}
     }
     
     var taskScheduleTime: Bool {
@@ -31,6 +32,24 @@ extension TaskItem {
     var taskTags: [Tag] {
         let result = tags?.allObjects as? [Tag] ?? []
         return result.sorted()
+    }
+    
+    var taskStatus: String {
+        if completed {
+            return "Completed"
+        } else {
+            return "incomplete"
+        }
+    }
+    
+    var taskTagsList: String {
+        guard let tags else { return "No tags" }
+
+        if tags.count == 0 {
+            return "No tags"
+        } else {
+            return taskTags.map(\.tagName).formatted()
+        }
     }
     
     static var example: TaskItem {
