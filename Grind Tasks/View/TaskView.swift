@@ -69,6 +69,9 @@ struct TaskView: View {
             }
         }
         .disabled(task.isDeleted)
+        .onReceive(task.objectWillChange) { _ in
+            dataController.queueSave()
+        }
     }
 }
 
