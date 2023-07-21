@@ -50,6 +50,7 @@ struct TaskRowView: View {
                 }
                 .foregroundStyle(.secondary)
             }
+            
         }
         .onAppear {
             let currentDate = Date()
