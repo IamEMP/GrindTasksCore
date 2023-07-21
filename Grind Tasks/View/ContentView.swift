@@ -10,32 +10,46 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var dataController: DataController
     
-    var tasks: [TaskItem] {
-        let filter = dataController.selectedFilter ?? .all
-        var allTasks: [TaskItem]
-
-        if let tag = filter.tag {
-            allTasks = tag.tasks?.allObjects as? [TaskItem] ?? []
-        } else {
-            let request = TaskItem.fetchRequest()
-            request.predicate = NSPredicate(format: "assignedDate > %@", filter.minAssignedDate as NSDate)
-            allTasks = (try? dataController.container.viewContext.fetch(request)) ?? []
-        }
-
-        return allTasks.sorted()
-    }
-    
     var body: some View {
-        List(selection: $dataController.selectedTask) {
-            ForEach(tasks) { task in
-                TaskRowView(tasks: task)
+ 
+                List(selection: $dataController.selectedTask) {
+                    ForEach(dataController.taskforSelectedFilter()) { task in
+                        TaskRowView(tasks: task)
+                    }
+                    .onDelete(perform: delete)
+                    .listRowBackground(Color(.systemBlue).opacity(0.4))
+
+                }
+                .listStyle(.insetGrouped)
+        
+                .navigationTitle("Tasks")
+                .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Search tasks, or type # to filter by tags") { tag in
+                    Text(tag.tagName)
+                }
+        
+                .toolbar {
+                    Menu {
+                        Button(dataController.filterEnabled ? "Turn Filter Off" : "Turn Filter On") {
+                            dataController.filterEnabled.toggle()
+                            
+                        }
+                        Divider()
+
+                        Picker("Status", selection: $dataController.filterStatus) {
+                            Text("All").tag(Status.all)
+                            Text("Incomplete").tag(Status.incomplete)
+                            Text("Completed").tag(Status.completed)
+                        }
+
+                    } label: {
+                        Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+                            .symbolVariant(dataController.filterEnabled ? .fill : .none)
+                    }
+                }
             }
-            .onDelete(perform: delete)
-        }
-        .navigationTitle("Tasks")
-    }
     
     func delete(_ offsets: IndexSet) {
+        let tasks = dataController.taskforSelectedFilter()
         for offset in offsets {
             let item = tasks[offset]
             dataController.delete(item)

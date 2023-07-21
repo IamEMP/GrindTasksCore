@@ -9,19 +9,23 @@ import SwiftUI
 
 struct DetailView: View {
     @EnvironmentObject var dataController: DataController
-
+    
     var body: some View {
-        VStack {
-            if let task = dataController.selectedTask {
-                TaskView(task: task)
-            } else {
-                NoTaskView()
+            VStack {
+                if let task = dataController.selectedTask {
+                    TaskView(task: task)
+                } else {
+                    NoTaskView()
+                }
             }
+            .navigationTitle("Details")
+        #if iOS
+            .navigationBarTitleDisplayMode(.inline)
+        #endif
         }
-        .navigationTitle("Details")
-        .navigationBarTitleDisplayMode(.inline)
     }
-}
+
+
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {

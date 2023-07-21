@@ -19,35 +19,35 @@ struct SidebarView: View {
     }
     
     var body: some View {
-        List(selection: $dataController.selectedFilter) {
-            Section("Smart Filters") {
-                ForEach(smartFilters) { filter in
-                    NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
+                List(selection: $dataController.selectedFilter) {
+                    Section("Filters") {
+                        ForEach(smartFilters) { filter in
+                            NavigationLink(value: filter) {
+                                Label(filter.name, systemImage: filter.icon)
+                            }
+                        }
+                    }
+                    .listRowBackground(Color(.systemBlue).opacity(0.4))
+                    Section("Tags") {
+                        ForEach(tagFilters) { filter in
+                            NavigationLink(value: filter) {
+                                Label(filter.name, systemImage: filter.icon)
+                                    .badge(filter.tag?.tagActiveTasks.count ?? 0)
+                                    
+                            }
+                        }
+                        .onDelete(perform: delete)
+                    }
+                    .listRowBackground(Color(.systemBlue).opacity(0.4))                }
+                .toolbar {
+                    Button {
+                        dataController.deleteAll()
+                        dataController.createSampleData()
+                    } label: {
+                        Label("ADD SAMPLES", systemImage: "flame")
                     }
                 }
             }
-            
-            Section("Tags") {
-                ForEach(tagFilters) { filter in
-                    NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
-                            .badge(filter.tag?.tagActiveTasks.count ?? 0)
-                    }
-                }
-                .onDelete(perform: delete)
-            }
-        }
-        .toolbar {
-            Button {
-                dataController.deleteAll()
-                dataController.createSampleData()
-            } label: {
-                Label("ADD SAMPLES", systemImage: "flame")
-            }
-        }
-    }
-    
     func delete(_ offsets: IndexSet) {
         for offset in offsets {
             let item = tags[offset]

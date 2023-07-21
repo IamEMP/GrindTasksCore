@@ -8,11 +8,23 @@
 import Foundation
 import CoreData
 
+
+enum Status {
+    case all, incomplete, completed, scheduled
+}
+
 class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
 
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedTask: TaskItem?
+    @Published var filterText = ""
+    @Published var filterTokens = [Tag]()
+    
+    @Published var filterEnabled = false
+    @Published var filterStatus = Status.all
+    @Published var sortNewestFirst = true
+
     
     private var saveTask: Task<Void, Error>?
 
@@ -21,6 +33,21 @@ class DataController: ObservableObject {
         dataController.createSampleData()
         return dataController
     }()
+    
+    var suggestedFilterTokens: [Tag] {
+        guard filterText.starts(with: "#") else {
+            return []
+        }
+
+        let trimmedFilterText = String(filterText.dropFirst()).trimmingCharacters(in: .whitespaces)
+        let request = Tag.fetchRequest()
+
+        if trimmedFilterText.isEmpty == false {
+            request.predicate = NSPredicate(format: "name CONTAINS[c] %@", trimmedFilterText)
+        }
+
+        return (try? container.viewContext.fetch(request).sorted()) ?? []
+    }
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Main")
@@ -118,5 +145,47 @@ class DataController: ObservableObject {
         let difference = allTagsSet.symmetricDifference(task.taskTags)
 
         return difference.sorted()
+    }
+    
+    func taskforSelectedFilter() -> [TaskItem] {
+        let filter = selectedFilter ?? .all
+        var predicates = [NSPredicate]()
+
+        if let tag = filter.tag {
+            let tagPredicate = NSPredicate(format: "tags CONTAINS %@", tag)
+            predicates.append(tagPredicate)
+        } else {
+            _ = NSPredicate(format: "assignedDate > %@", filter.minAssignedDate as NSDate)
+        }
+        
+        let trimmedFilterText = filterText.trimmingCharacters(in: .whitespaces)
+
+        if trimmedFilterText.isEmpty == false {
+            let titlePredicate = NSPredicate(format: "title CONTAINS[c] %@", trimmedFilterText)
+            let contentPredicate = NSPredicate(format: "content CONTAINS[c] %@", trimmedFilterText)
+            let combinedPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [titlePredicate, contentPredicate])
+            predicates.append(combinedPredicate)
+        }
+        
+        if filterTokens.isEmpty == false {
+            for filterToken in filterTokens {
+                let tokenPredicate = NSPredicate(format: "tags CONTAINS %@", filterToken)
+                predicates.append(tokenPredicate)
+            }
+        }
+        
+        if filterEnabled {
+            if filterStatus != .all {
+                let lookForCompleted = filterStatus == .completed
+                let statusFilter = NSPredicate(format: "completed = %@", NSNumber(value: lookForCompleted))
+                predicates.append(statusFilter)
+            }
+        }
+        
+        let request = TaskItem.fetchRequest()
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        
+       let allTasks = (try? container.viewContext.fetch(request)) ?? []
+        return allTasks.sorted()
     }
 }
