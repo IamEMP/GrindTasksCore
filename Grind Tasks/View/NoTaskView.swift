@@ -15,14 +15,14 @@ struct NoTaskView: View {
             .font(.title)
             .foregroundStyle(.secondary)
 
-        Button("Create Task") {
-            // make a new issue
-        }
+            Button("Create Task", action: dataController.newTask)
     }
 }
 
 struct NoTaskView_Previews: PreviewProvider {
     static var previews: some View {
         NoTaskView()
+            .environmentObject(DataController.preview)
+
     }
 }

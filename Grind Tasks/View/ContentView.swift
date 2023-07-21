@@ -28,6 +28,10 @@ struct ContentView: View {
                 }
         
                 .toolbar {
+                    Button(action: dataController.newTask) {
+                        Label("New Task", systemImage: "square.and.pencil")
+                    }
+                    
                     Menu {
                         Button(dataController.filterEnabled ? "Turn Filter Off" : "Turn Filter On") {
                             dataController.filterEnabled.toggle()

@@ -188,4 +188,24 @@ class DataController: ObservableObject {
        let allTasks = (try? container.viewContext.fetch(request)) ?? []
         return allTasks.sorted()
     }
+    
+    func newTask() {
+        let task = TaskItem(context: container.viewContext)
+        task.title = "New task"
+        
+        if let tag = selectedFilter?.tag {
+            task.addToTags(tag)
+        }
+        save()
+        selectedTask = task
+
+    }
+    
+    func newTag() {
+        let tag = Tag(context: container.viewContext)
+        tag.id = UUID()
+        tag.name = "New tag"
+        save()
+    }
+    
 }
