@@ -17,11 +17,13 @@ struct ContentView: View {
                         TaskRowView(tasks: task)
                     }
                     .onDelete(perform: delete)
+#if os(iOS)
                     .listRowBackground(Color(.systemBlue).opacity(0.4))
-
+#endif
                 }
+        #if os(iOS)
                 .listStyle(.insetGrouped)
-        
+        #endif
                 .navigationTitle("Tasks")
                 .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Search tasks, or type # to filter by tags") { tag in
                     Text(tag.tagName)
