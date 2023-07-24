@@ -1,0 +1,186 @@
+[
+    {
+        "name": "First Steps",
+        "description": "Add your first task.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 1,
+        "image": "figure.walk"
+    },
+    {
+        "name": "A Great Start",
+        "description": "Add 10 tasks.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 10,
+        "image": "hand.thumbsup.fill"
+    },
+    {
+        "name": "Moving On Up",
+        "description": "Add 20 tasks.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 20,
+        "image": "tray.and.arrow.up.fill"
+    },
+    {
+        "name": "Gathering Speed",
+        "description": "Add 50 tasks.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 50,
+        "image": "speedometer"
+    },
+    {
+        "name": "Making Waves",
+        "description": "Add 100 tasks.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 100,
+        "image": "dot.radiowaves.left.and.right"
+    },
+    {
+        "name": "High Performer",
+        "description": "Add 250 tasks.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 250,
+        "image": "square.stack.3d.up.fill"
+    },
+    {
+        "name": "Star Performer",
+        "description": "Add 500 tasks.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 500,
+        "image": "star.circle.fill"
+    },
+    {
+        "name": "Champion Performer",
+        "description": "Add 1000 tasks.",
+        "color": "Light Blue",
+        "criterion": "tasks",
+        "value": 1000,
+        "image": "crown.fill"
+    },
+    {
+        "name": "Checking Boxes",
+        "description": "Complete your first task.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 1,
+        "image": "checkmark.shield.fill"
+    },
+    {
+        "name": "Novice",
+        "description": "Complete 10 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 10,
+        "image": "guitars.fill"
+    },
+    {
+        "name": "20 is Plenty",
+        "description": "Completed 20 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 20,
+        "image": "20.square.fill"
+    },
+    {
+        "name": "Bullseye!",
+        "description": "Complete 50 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 50,
+        "image": "target"
+    },
+    {
+        "name": "Flying High",
+        "description": "Complete 100 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 100,
+        "image": "airplane.circle.fill"
+    },
+    {
+        "name": "You're On Fire!",
+        "description": "Complete 250 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 250,
+        "image": "flame.fill"
+    },
+    {
+        "name": "Task Hunter",
+        "description": "Complete 500 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 500,
+        "image": "figure.hunting"
+    },
+    {
+        "name": "Boom!",
+        "description": "Complete 1000 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 1000,
+        "image": "bolt.circle.fill"
+    },
+    {
+        "name": "Him",
+        "description": "Complete 100,000 tasks.",
+        "color": "Green",
+        "criterion": "completed",
+        "value": 100000,
+        "image": "figure.flexibility"
+    },
+    {
+        "name": "Playing tag",
+        "description": "You created your first tag.",
+        "color": "Gold",
+        "criterion": "tags",
+        "value": 1,
+        "image": "tag.fill"
+    },
+    {
+        "name": "In tags we trust",
+        "description": "You've created 10 tags.",
+        "color": "Gold",
+        "criterion": "tags",
+        "value": 10,
+        "image": "tag.circle.fill"
+    },
+    {
+        "name": "Supreme tagger",
+        "description": "You've created 50 tags.",
+        "color": "Gold",
+        "criterion": "tags",
+        "value": 50,
+        "image": "square.grid.3x1.folder.fill.badge.plus"
+    },
+    {
+        "name": "Tagging Magecraft",
+        "description": "You've created 250 tags.",
+        "color": "Gold",
+        "criterion": "tags",
+        "value": 250,
+        "image": "wand.and.rays"
+    },
+    {
+    "name": "There is a God.. and he tags",
+    "description": "You've created 1000 tags.",
+    "color": "Gold",
+    "criterion": "tags",
+    "value": 1000,
+    "image": "figure.mind.and.body"
+    },
+    {
+        "name": "Supporting the team",
+        "description": "You bought the premium unlock.",
+        "color": "Purple",
+        "criterion": "unlock",
+        "value": 0,
+        "image": "dollarsign.square.fill"
+    }
+]
