@@ -186,7 +186,7 @@ class DataController: ObservableObject {
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         
        let allTasks = (try? container.viewContext.fetch(request)) ?? []
-        return allTasks.sorted()
+        return allTasks
     }
     
     func newTask() {
