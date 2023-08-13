@@ -28,36 +28,7 @@ struct TaskView: View {
                     Toggle("Schedule Notifications", isOn: $task.scheduleTime)
                 }
                         
-                Menu {
-                            // show selected tags first
-                    ForEach(task.taskTags) { tag in
-                        Button {
-                            task.removeFromTags(tag)
-                        } label: {
-                                    Label(tag.tagName, systemImage: "checkmark")
-                        }
-                    }
-                            
-                            // now show unselected tags
-                    let otherTags = dataController.missingTags(from: task)
-                            
-                    if otherTags.isEmpty == false {
-                                Divider()
-                                
-                        Section("Add Tags") {
-                            ForEach(otherTags) { tag in
-                                Button(tag.tagName) {
-                                    task.addToTags(tag)
-                                }
-                            }
-                        }
-                    }
-                } label: {
-                    Text(task.taskTagsList)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .animation(nil, value: task.taskTagsList)
-                }
+                TagsMenuView(task: task)
             }
                     
             Section {
@@ -66,7 +37,7 @@ struct TaskView: View {
                         .font(.title2)
                         .foregroundStyle(.secondary)
                             
-                    TextField("Description", text: $task.taskContent, prompt: Text("Enter the issue description here"), axis: .vertical)
+                    TextField("Description", text: $task.taskContent, prompt: Text("Enter the task description here"), axis: .vertical)
                 }
             }
         }
@@ -76,22 +47,7 @@ struct TaskView: View {
                     dataController.queueSave()
         }
         .toolbar {
-            Menu {
-                Button {
-                    UIPasteboard.general.string = task.title
-                } label: {
-                    Label("Copy Task Title", systemImage: "doc.on.doc")
-                }
-
-                Button {
-                    task.completed.toggle()
-                    dataController.save()
-                } label: {
-                    Label(task.completed ? "Re-open Task" : "Complete Task", systemImage: "bubble.left.and.exclamationmark.bubble.right")
-                }
-            } label: {
-                Label("Actions", systemImage: "ellipsis.circle")
-            }
+            TaskViewToolbar(task: task)
         }
     }
 }

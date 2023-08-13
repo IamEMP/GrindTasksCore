@@ -40,7 +40,7 @@ struct TaskRowView: View {
                 Spacer()
 
                 VStack(alignment: .trailing) {
-                    Text(tasks.taskAssignedDate.formatted(date: .abbreviated, time: .omitted))
+                    Text(tasks.taskFormattedScheduledDate)
                         .font(.subheadline)
 
                     if tasks.completed {

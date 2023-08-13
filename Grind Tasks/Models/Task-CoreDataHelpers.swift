@@ -38,8 +38,12 @@ extension TaskItem {
         if completed {
             return "Completed"
         } else {
-            return "incomplete"
+            return "Incomplete"
         }
+    }
+    
+    var taskFormattedScheduledDate: String {
+        taskAssignedDate.formatted(date: .abbreviated, time: .omitted)
     }
     
     var taskTagsList: String {

@@ -1,0 +1,97 @@
+/* 
+  Localizable.strings
+  Grind Tasks
+
+  Created by Ethan Phillips on 7/25/23.
+  
+*/
+
+
+/* GENERAL STRINGS */
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Delete" = "Delete";
+"Rename" = "Rename";
+"Actions" = "Actions";
+
+
+
+/* SIDEBARVIEW */
+"Filters" = "Filters";
+"Smart Filters" = "Smart Filters";
+"All Tasks" = "All Tasks";
+"Recent Tasks" = "Recent Tasks";
+"Tags" = "Tags";
+"Add tag" = "Add tag";
+"Show awards" = "Show awards";
+
+"Rename tag" = "Rename tag";
+"New name" = "New name";
+
+
+
+/* CONTENTVIEW */
+"Tasks" = "Tasks";
+
+/* A button that shows a menu with the following options */
+"Filter" = "Filter";
+"Turn Filter On" = "Turn Filter On"; /* Enables filtering */
+"Turn Filter Off" = "Turn Filter Off"; /* Disables filtering */
+"Sort By" = "Sort By"; /* Adjust the order issues are shown */
+"Schedule Time" = "Schedule Time"; /* Schedules Notifications */
+
+"All" = "All";
+"Completed" = "Completed";
+"Closed" = "Closed";
+"Incomplete" = "Incomplete";
+
+
+/* Create a new task */
+"New Task" = "New Task";
+
+/* A text placeholder, to help users search */
+"Search tasks, or type # to filter by tags" = "Search tasks, or type # to filter by tags";
+"Enter the task title here" = "Enter the task title here";
+
+/* Shown as a status for closed tasks */
+"COMPLETED" = "COMPLETED";
+
+
+
+/* DETAILSVIEW */
+"Details" = "Details";
+
+/* NOTASKVIEW */
+"No Task Selected" = "No Task Selected";
+
+/* TASKVIEW */
+"Copy Task Title" = "Copy Task Title";
+"Copy Task Description" = "Copy Task Description";
+"Complete Task" = "Complete Task";
+"Re-open Task" = "Re-open Task";
+
+/* Fields that let the users enter details about a specific task */
+"Enter the issue title here" = "Enter the issue title here";
+"**Modified:** %@" = "**Modified:** %@";
+"**Status:** %@" = "**Status:** %@";
+"Add Tags" = "Add Tags";
+"Basic Information" = "Basic Information";
+"Enter the task description here" = "Enter the task description here";
+"Schedule Notifications" = "Schedule Notifications";
+
+
+
+/* AWARDS VIEW */
+"Awards" = "Awards";
+
+
+
+/* DATA */
+"New tag" = "New tag";
+"New task" = "New task";
+
+
+
+/* DEBUG ONLY */
+"ADD SAMPLES" = "ADD SAMPLES";
+
