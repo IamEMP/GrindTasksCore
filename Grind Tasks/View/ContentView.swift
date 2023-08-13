@@ -28,30 +28,7 @@ struct ContentView: View {
                 .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Search tasks, or type # to filter by tags") { tag in
                     Text(tag.tagName)
                 }
-        
-                .toolbar {
-                    Button(action: dataController.newTask) {
-                        Label("New Task", systemImage: "square.and.pencil")
-                    }
-                    
-                    Menu {
-                        Button(dataController.filterEnabled ? "Turn Filter Off" : "Turn Filter On") {
-                            dataController.filterEnabled.toggle()
-                            
-                        }
-                        Divider()
-
-                        Picker("Status", selection: $dataController.filterStatus) {
-                            Text("All").tag(Status.all)
-                            Text("Incomplete").tag(Status.incomplete)
-                            Text("Completed").tag(Status.completed)
-                        }
-
-                    } label: {
-                        Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
-                            .symbolVariant(dataController.filterEnabled ? .fill : .none)
-                    }
-                }
+                .toolbar(content: ContentViewToolbar.init)
             }
     
     func delete(_ offsets: IndexSet) {

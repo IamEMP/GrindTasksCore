@@ -191,7 +191,8 @@ class DataController: ObservableObject {
     
     func newTask() {
         let task = TaskItem(context: container.viewContext)
-        task.title = "New task"
+        task.title = NSLocalizedString("New task", comment: "Create a new task title")
+        task.completed = false
         
         if let tag = selectedFilter?.tag {
             task.addToTags(tag)
@@ -236,7 +237,7 @@ class DataController: ObservableObject {
     func newTag() {
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
-        tag.name = "New tag"
+        tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
         save()
     }
     

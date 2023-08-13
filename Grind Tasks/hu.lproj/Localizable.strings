@@ -1,0 +1,86 @@
+/* GENERAL STRINGS */
+"OK" = "OK";
+"Cancel" = "Mégsem";
+"Delete" = "Törlés";
+"Rename" = "Átnevezés";
+"Actions" = "Műveletek";
+
+
+
+/* SIDEBARVIEW */
+"Filters" = "Szűrők";
+"All Tasks" = "Összes probléma";
+"Tags" = "Címkék";
+"Add tag" = "Címke hozzáadása";
+"Show awards" = "Díjak megjelenítése";
+
+"Rename tag" = "Címke átnevezése";
+"New name" = "Új név";
+"Recent Tasks" = "legutóbbi feladatok";
+
+
+
+/* CONTENTVIEW */
+"Tasks" = "feladat";
+"Create Task" = "feladatok létrehozása";
+
+/* A button that shows a menu with the following options */
+"Filter" = "Szűrő";
+"Turn Filter On" = "Szűrő bekapcsolása"; /* Enables filtering */
+"Turn Filter Off" = "Szűrő kikapcsolása"; /* Disables filtering */
+"Sort By" = "Rendezés"; /* Adjust the order issues are shown */
+"Schedule Notifications" = "Időbeosztás"; /* Schedules Notifications */
+
+
+"All" = "Összes";
+"Incomplete" = "Nyitott";
+"Complete" = "Lezárt";
+"Completed" = "Lezárt";
+
+
+
+/* Create a new issue */
+"New Task" = "Új probléma";
+
+/* A text placeholder, to help users search */
+"Search tasks, or type # to filter by tags" = "Keresés feladatok között, vagy írj be # jelet címkék szerinti szűréshez";
+
+/* Shown as a status for closed issues */
+"COMPLETED" = "LEZÁRT";
+
+
+
+/* DETAILSVIEW */
+"Details" = "Részletek";
+
+/* NOTASKVIEW */
+"No Task Selected" = "Nincs kiválasztott probléma";
+
+/* TASKVIEW */
+"Copy Task Title" = "Probléma címének másolása";
+"Close Task" = "Probléma lezárása";
+"Re-open Task" = "Probléma újranyitása";
+
+/* Fields that let the users enter details about a specific issue */
+"Enter the task title here" = "Írja be a probléma címét ide";
+"**Status:** %@" = "**Állapot:** %@";
+"Add Tags" = "Címkék hozzáadása";
+"Basic Information" = "Alapinformáció";
+"Enter the task description here" = "Írja be a probléma leírását ide";
+
+
+
+/* AWARDS VIEW */
+"Awards" = "Díjak";
+
+
+
+/* DATA */
+"New tag" = "Új címke";
+"New task" = "Új szám";
+
+
+
+/* DEBUG ONLY */
+"ADD SAMPLES" = "ADD SAMPLES";
+
