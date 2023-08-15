@@ -39,6 +39,6 @@ struct UserFilterRow: View {
 
 struct UserFilterRow_Previews: PreviewProvider {
     static var previews: some View {
-        UserFilterRow(filter:.all, rename: { _ in }, delete: { _ in })
+        UserFilterRow(filter: .all, rename: { _ in }, delete: { _ in })
     }
 }

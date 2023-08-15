@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension Bundle {
     func decode<T: Decodable>(
         _ file: String,
@@ -21,7 +20,6 @@ extension Bundle {
         guard let data = try? Data(contentsOf: url) else {
             fatalError("Failed to load \(file) from bundle.")
         }
-        
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = dateDecodingStrategy
         decoder.keyDecodingStrategy = keyDecodingStrategy

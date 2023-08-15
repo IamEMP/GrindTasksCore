@@ -21,6 +21,7 @@
 		D96CBFDA2A889F4E0097B803 /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CBFD92A889F4E0097B803 /* TagsMenuView.swift */; };
 		D96CBFDC2A88A2810097B803 /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CBFDB2A88A2810097B803 /* SmartFilterRow.swift */; };
 		D96CBFDE2A88A4200097B803 /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CBFDD2A88A4200097B803 /* UserFilterRow.swift */; };
+		D96CBFE12A88A82C0097B803 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96CBFE02A88A82C0097B803 /* Launch Screen.storyboard */; };
 		D972464F2A5F467200005C9A /* Grind_TasksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972464E2A5F467200005C9A /* Grind_TasksApp.swift */; };
 		D97246512A5F467200005C9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97246502A5F467200005C9A /* ContentView.swift */; };
 		D97246532A5F467200005C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97246522A5F467200005C9A /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		D96CBFD92A889F4E0097B803 /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
 		D96CBFDB2A88A2810097B803 /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
 		D96CBFDD2A88A4200097B803 /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
+		D96CBFE02A88A82C0097B803 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D972464B2A5F467200005C9A /* Grind Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grind Tasks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D972464E2A5F467200005C9A /* Grind_TasksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grind_TasksApp.swift; sourceTree = "<group>"; };
 		D97246502A5F467200005C9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D96CBFDF2A88A8010097B803 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D96CBFE02A88A82C0097B803 /* Launch Screen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D97246422A5F467200005C9A = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		D972464D2A5F467200005C9A /* Grind Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				D96CBFDF2A88A8010097B803 /* Resources */,
 				D97246652A60551300005C9A /* Grind-Tasks-Info.plist */,
 				D972465F2A5F471C00005C9A /* Models */,
 				D972465E2A5F471600005C9A /* ViewModel */,
@@ -235,6 +246,7 @@
 				D98028012A7030C500E41C21 /* Awards.json in Resources */,
 				D97246532A5F467200005C9A /* Assets.xcassets in Resources */,
 				D98027FD2A702D9400E41C21 /* Localizable.stringsdict in Resources */,
+				D96CBFE12A88A82C0097B803 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +444,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -471,6 +484,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

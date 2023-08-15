@@ -16,11 +16,18 @@ struct TaskView: View {
         Form {
             Section {
                 VStack(alignment: .leading) {
-                    TextField("Title", text: $task.taskTitle, prompt: Text("Enter the task title here"))
+                    TextField(
+                        "Title",
+                        text: $task.taskTitle,
+                        prompt: Text("Enter the task title here")
+                    )
                                 .font(.title)
                             
-                    DatePicker("Task due by", selection: $task.taskAssignedDate)
-                                .datePickerStyle(GraphicalDatePickerStyle())
+                    DatePicker(
+                        "Task due by",
+                        selection: $task.taskAssignedDate)
+                                .datePickerStyle(GraphicalDatePickerStyle()
+                                )
                             
                     Text("**Status:** \(task.taskStatus)")
                                 .foregroundStyle(.secondary)
