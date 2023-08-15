@@ -11,6 +11,10 @@ struct TaskViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var task: TaskItem
     
+    var openCloseButtonText: LocalizedStringKey {
+        task.completed ? "Re-open Task" : "Complete Task"
+    }
+    
     var body: some View {
         Menu {
             Button {
@@ -29,7 +33,7 @@ struct TaskViewToolbar: View {
                 task.completed.toggle()
                 dataController.save()
             } label: {
-                Label(task.completed ? "Re-open Task" : "Complete Task", systemImage: "checkmark.circle")
+                Label(openCloseButtonText, systemImage: "checkmark.circle")
             }
             Divider()
             

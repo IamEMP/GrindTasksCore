@@ -21,11 +21,14 @@ struct ContentView: View {
                     .listRowBackground(Color(.systemBlue).opacity(0.4))
 #endif
                 }
-        #if os(iOS)
+#if os(iOS)
                 .listStyle(.insetGrouped)
-        #endif
+#endif
                 .navigationTitle("Tasks")
-                .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Search tasks, or type # to filter by tags") { tag in
+                .searchable(text: $dataController.filterText,
+                            tokens: $dataController.filterTokens,
+                            suggestedTokens: .constant(dataController.suggestedFilterTokens),
+                            prompt: "Search tasks, or type # to filter by tags") { tag in
                     Text(tag.tagName)
                 }
                 .toolbar(content: ContentViewToolbar.init)

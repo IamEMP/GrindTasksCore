@@ -60,6 +60,7 @@
 "Copy Task Title" = "Probléma címének másolása";
 "Close Task" = "Probléma lezárása";
 "Re-open Task" = "Probléma újranyitása";
+"Copy Task Description" = "Feladatleírás Másolása";
 
 /* Fields that let the users enter details about a specific issue */
 "Enter the task title here" = "Írja be a probléma címét ide";
