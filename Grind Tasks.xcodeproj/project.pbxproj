@@ -12,9 +12,9 @@
 		D938450E2A617D760041AE1C /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450D2A617D760041AE1C /* SidebarView.swift */; };
 		D93845102A617DAF0041AE1C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450F2A617DAF0041AE1C /* DetailView.swift */; };
 		D93845122A617EA10041AE1C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93845112A617EA10041AE1C /* Filter.swift */; };
-		D943B6862A699EE00059CBA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943B6852A699EE00059CBA2 /* Extensions.swift */; };
 		D9472C752A686BC600BCCF39 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9472C742A686BC600BCCF39 /* TaskView.swift */; };
 		D9472C772A686BCF00BCCF39 /* NoTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9472C762A686BCF00BCCF39 /* NoTaskView.swift */; };
+		D95EC2F72A963C9C00C68792 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EC2F62A963C9C00C68792 /* DataController.swift */; };
 		D96CBFD42A889A790097B803 /* SidebarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CBFD32A889A790097B803 /* SidebarViewToolbar.swift */; };
 		D96CBFD62A889C7B0097B803 /* TaskViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CBFD52A889C7B0097B803 /* TaskViewToolbar.swift */; };
 		D96CBFD82A889D630097B803 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96CBFD72A889D630097B803 /* ContentViewToolbar.swift */; };
@@ -27,7 +27,6 @@
 		D97246532A5F467200005C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97246522A5F467200005C9A /* Assets.xcassets */; };
 		D97246572A5F467200005C9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97246562A5F467200005C9A /* Preview Assets.xcassets */; };
 		D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D97246602A5F47A500005C9A /* Main.xcdatamodeld */; };
-		D97246642A5F4A1100005C9A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97246632A5F4A1100005C9A /* DataController.swift */; };
 		D98027F92A702B6300E41C21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D98027FB2A702B6300E41C21 /* Localizable.strings */; };
 		D98027FD2A702D9400E41C21 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D98027FF2A702D9400E41C21 /* Localizable.stringsdict */; };
 		D98028012A7030C500E41C21 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D98028032A7030C500E41C21 /* Awards.json */; };
@@ -44,9 +43,9 @@
 		D938450D2A617D760041AE1C /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		D938450F2A617DAF0041AE1C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D93845112A617EA10041AE1C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		D943B6852A699EE00059CBA2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D9472C742A686BC600BCCF39 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		D9472C762A686BCF00BCCF39 /* NoTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTaskView.swift; sourceTree = "<group>"; };
+		D95EC2F62A963C9C00C68792 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D96CBFD32A889A790097B803 /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
 		D96CBFD52A889C7B0097B803 /* TaskViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewToolbar.swift; sourceTree = "<group>"; };
 		D96CBFD72A889D630097B803 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
@@ -61,8 +60,7 @@
 		D97246542A5F467200005C9A /* Grind_Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Grind_Tasks.entitlements; sourceTree = "<group>"; };
 		D97246562A5F467200005C9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D97246612A5F47A500005C9A /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
-		D97246632A5F4A1100005C9A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		D97246652A60551300005C9A /* Grind-Tasks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Grind-Tasks-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D97246652A60551300005C9A /* Grind-Tasks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Grind-Tasks-Info.plist"; path = "Grind Tasks/Configuration/Grind-Tasks-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D98027FA2A702B6300E41C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D98027FC2A702B8200E41C21 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D98027FE2A702D9400E41C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -87,6 +85,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D95EC2ED2A96359E00C68792 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9B30EAE2A6DC0490091831D /* Bundle-Decodable.swift */,
+				D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */,
+				D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D95EC2EE2A96361E00C68792 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D97246602A5F47A500005C9A /* Main.xcdatamodeld */,
+				D97246652A60551300005C9A /* Grind-Tasks-Info.plist */,
+				D97246542A5F467200005C9A /* Grind_Tasks.entitlements */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		D95EC2EF2A96388300C68792 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				D98027FB2A702B6300E41C21 /* Localizable.strings */,
+				D98027FF2A702D9400E41C21 /* Localizable.stringsdict */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		D95EC2F02A96393900C68792 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				D93845112A617EA10041AE1C /* Filter.swift */,
+				D938450D2A617D760041AE1C /* SidebarView.swift */,
+				D96CBFD32A889A790097B803 /* SidebarViewToolbar.swift */,
+				D96CBFDB2A88A2810097B803 /* SmartFilterRow.swift */,
+				D96CBFDD2A88A4200097B803 /* UserFilterRow.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		D95EC2F12A96394200C68792 /* Editing */ = {
+			isa = PBXGroup;
+			children = (
+				D9472C742A686BC600BCCF39 /* TaskView.swift */,
+				D938450F2A617DAF0041AE1C /* DetailView.swift */,
+				D9472C762A686BCF00BCCF39 /* NoTaskView.swift */,
+				D96CBFD52A889C7B0097B803 /* TaskViewToolbar.swift */,
+				D96CBFD92A889F4E0097B803 /* TagsMenuView.swift */,
+			);
+			path = Editing;
+			sourceTree = "<group>";
+		};
+		D95EC2F22A96394C00C68792 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				D9991E982A6EB75B00334CA9 /* AwardsView.swift */,
+				D9991E9A2A6EB7CD00334CA9 /* Award.swift */,
+				D98028032A7030C500E41C21 /* Awards.json */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		D95EC2F32A96395400C68792 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				D97246502A5F467200005C9A /* ContentView.swift */,
+				D96CBFD72A889D630097B803 /* ContentViewToolbar.swift */,
+				D9A02FBA2A65D50A007ABF2B /* TaskRowView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		D96CBFDF2A88A8010097B803 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,19 +185,19 @@
 		D972464D2A5F467200005C9A /* Grind Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				D96CBFDF2A88A8010097B803 /* Resources */,
-				D97246652A60551300005C9A /* Grind-Tasks-Info.plist */,
-				D972465F2A5F471C00005C9A /* Models */,
-				D972465E2A5F471600005C9A /* ViewModel */,
+				D95EC2F02A96393900C68792 /* Filters */,
+				D95EC2F32A96395400C68792 /* Tasks */,
+				D95EC2F12A96394200C68792 /* Editing */,
+				D95EC2F22A96394C00C68792 /* Awards */,
+				D95EC2EE2A96361E00C68792 /* Configuration */,
 				D972465D2A5F470E00005C9A /* View */,
+				D95EC2ED2A96359E00C68792 /* Extensions */,
+				D96CBFDF2A88A8010097B803 /* Resources */,
+				D95EC2F62A963C9C00C68792 /* DataController.swift */,
 				D972464E2A5F467200005C9A /* Grind_TasksApp.swift */,
-				D98027FF2A702D9400E41C21 /* Localizable.stringsdict */,
-				D98027FB2A702B6300E41C21 /* Localizable.strings */,
-				D97246602A5F47A500005C9A /* Main.xcdatamodeld */,
-				D98028032A7030C500E41C21 /* Awards.json */,
+				D95EC2EF2A96388300C68792 /* Localization */,
 				D9991E9C2A6EBD1800334CA9 /* Colors.xcassets */,
 				D97246522A5F467200005C9A /* Assets.xcassets */,
-				D97246542A5F467200005C9A /* Grind_Tasks.entitlements */,
 				D97246552A5F467200005C9A /* Preview Content */,
 			);
 			path = "Grind Tasks";
@@ -143,42 +214,8 @@
 		D972465D2A5F470E00005C9A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D97246502A5F467200005C9A /* ContentView.swift */,
-				D938450D2A617D760041AE1C /* SidebarView.swift */,
-				D938450F2A617DAF0041AE1C /* DetailView.swift */,
-				D9A02FBA2A65D50A007ABF2B /* TaskRowView.swift */,
-				D9472C742A686BC600BCCF39 /* TaskView.swift */,
-				D9472C762A686BCF00BCCF39 /* NoTaskView.swift */,
-				D9991E982A6EB75B00334CA9 /* AwardsView.swift */,
-				D96CBFD32A889A790097B803 /* SidebarViewToolbar.swift */,
-				D96CBFD52A889C7B0097B803 /* TaskViewToolbar.swift */,
-				D96CBFD72A889D630097B803 /* ContentViewToolbar.swift */,
-				D96CBFD92A889F4E0097B803 /* TagsMenuView.swift */,
-				D96CBFDB2A88A2810097B803 /* SmartFilterRow.swift */,
-				D96CBFDD2A88A4200097B803 /* UserFilterRow.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D972465E2A5F471600005C9A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D972465F2A5F471C00005C9A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D97246632A5F4A1100005C9A /* DataController.swift */,
-				D93845112A617EA10041AE1C /* Filter.swift */,
-				D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */,
-				D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */,
-				D943B6852A699EE00059CBA2 /* Extensions.swift */,
-				D9B30EAE2A6DC0490091831D /* Bundle-Decodable.swift */,
-				D9991E9A2A6EB7CD00334CA9 /* Award.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,20 +301,19 @@
 				D9A02FBB2A65D50A007ABF2B /* TaskRowView.swift in Sources */,
 				D9472C752A686BC600BCCF39 /* TaskView.swift in Sources */,
 				D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */,
+				D95EC2F72A963C9C00C68792 /* DataController.swift in Sources */,
 				D96CBFD62A889C7B0097B803 /* TaskViewToolbar.swift in Sources */,
 				D9991E9B2A6EB7CD00334CA9 /* Award.swift in Sources */,
 				D9B30EAF2A6DC0490091831D /* Bundle-Decodable.swift in Sources */,
 				D93845102A617DAF0041AE1C /* DetailView.swift in Sources */,
 				D96CBFDC2A88A2810097B803 /* SmartFilterRow.swift in Sources */,
 				D9472C772A686BCF00BCCF39 /* NoTaskView.swift in Sources */,
-				D97246642A5F4A1100005C9A /* DataController.swift in Sources */,
 				D9991E992A6EB75B00334CA9 /* AwardsView.swift in Sources */,
 				D938450E2A617D760041AE1C /* SidebarView.swift in Sources */,
 				D91A90242A65A78900EFBE74 /* Tag-CoreDataHelpers.swift in Sources */,
 				D96CBFDE2A88A4200097B803 /* UserFilterRow.swift in Sources */,
 				D97246512A5F467200005C9A /* ContentView.swift in Sources */,
 				D972464F2A5F467200005C9A /* Grind_TasksApp.swift in Sources */,
-				D943B6862A699EE00059CBA2 /* Extensions.swift in Sources */,
 				D96CBFD42A889A790097B803 /* SidebarViewToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Grind Tasks/Grind_Tasks.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Grind Tasks/Configuration/Grind_Tasks.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grind Tasks/Preview Content\"";
@@ -437,7 +473,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Grind-Tasks-Info.plist";
+				INFOPLIST_FILE = "Grind Tasks/Configuration/Grind-Tasks-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -469,7 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Grind Tasks/Grind_Tasks.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Grind Tasks/Configuration/Grind_Tasks.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grind Tasks/Preview Content\"";
@@ -477,7 +513,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Grind-Tasks-Info.plist";
+				INFOPLIST_FILE = "Grind Tasks/Configuration/Grind-Tasks-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
