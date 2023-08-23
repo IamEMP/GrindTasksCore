@@ -35,7 +35,19 @@
 		D9991E9D2A6EBD1800334CA9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9991E9C2A6EBD1800334CA9 /* Colors.xcassets */; };
 		D9A02FBB2A65D50A007ABF2B /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A02FBA2A65D50A007ABF2B /* TaskRowView.swift */; };
 		D9B30EAF2A6DC0490091831D /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B30EAE2A6DC0490091831D /* Bundle-Decodable.swift */; };
+		D9E8FE922A96A2DC00DA4309 /* Grind_TasksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E8FE912A96A2DC00DA4309 /* Grind_TasksTests.swift */; };
+		D9E8FE9A2A96A5D700DA4309 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E8FE992A96A5D700DA4309 /* AssetTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9E8FE932A96A2DC00DA4309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D97246432A5F467200005C9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D972464A2A5F467200005C9A;
+			remoteInfo = "Grind Tasks";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task-CoreDataHelpers.swift"; sourceTree = "<group>"; };
@@ -72,10 +84,21 @@
 		D9991E9C2A6EBD1800334CA9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D9A02FBA2A65D50A007ABF2B /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		D9B30EAE2A6DC0490091831D /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		D9E8FE8F2A96A2DC00DA4309 /* Grind TasksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grind TasksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E8FE912A96A2DC00DA4309 /* Grind_TasksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grind_TasksTests.swift; sourceTree = "<group>"; };
+		D9E8FE982A96A44500DA4309 /* Grind Tasks.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Grind Tasks.xctestplan"; sourceTree = "<group>"; };
+		D9E8FE992A96A5D700DA4309 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D97246482A5F467200005C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E8FE8C2A96A2DC00DA4309 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -170,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				D972464D2A5F467200005C9A /* Grind Tasks */,
+				D9E8FE902A96A2DC00DA4309 /* Grind TasksTests */,
 				D972464C2A5F467200005C9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -178,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				D972464B2A5F467200005C9A /* Grind Tasks.app */,
+				D9E8FE8F2A96A2DC00DA4309 /* Grind TasksTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,7 +215,6 @@
 				D95EC2F12A96394200C68792 /* Editing */,
 				D95EC2F22A96394C00C68792 /* Awards */,
 				D95EC2EE2A96361E00C68792 /* Configuration */,
-				D972465D2A5F470E00005C9A /* View */,
 				D95EC2ED2A96359E00C68792 /* Extensions */,
 				D96CBFDF2A88A8010097B803 /* Resources */,
 				D95EC2F62A963C9C00C68792 /* DataController.swift */,
@@ -211,11 +235,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D972465D2A5F470E00005C9A /* View */ = {
+		D9E8FE902A96A2DC00DA4309 /* Grind TasksTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9E8FE982A96A44500DA4309 /* Grind Tasks.xctestplan */,
+				D9E8FE912A96A2DC00DA4309 /* Grind_TasksTests.swift */,
+				D9E8FE992A96A5D700DA4309 /* AssetTests.swift */,
 			);
-			path = View;
+			path = "Grind TasksTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +265,24 @@
 			productReference = D972464B2A5F467200005C9A /* Grind Tasks.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D9E8FE8E2A96A2DC00DA4309 /* Grind TasksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9E8FE952A96A2DC00DA4309 /* Build configuration list for PBXNativeTarget "Grind TasksTests" */;
+			buildPhases = (
+				D9E8FE8B2A96A2DC00DA4309 /* Sources */,
+				D9E8FE8C2A96A2DC00DA4309 /* Frameworks */,
+				D9E8FE8D2A96A2DC00DA4309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9E8FE942A96A2DC00DA4309 /* PBXTargetDependency */,
+			);
+			name = "Grind TasksTests";
+			productName = "Grind TasksTests";
+			productReference = D9E8FE8F2A96A2DC00DA4309 /* Grind TasksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,6 +295,10 @@
 				TargetAttributes = {
 					D972464A2A5F467200005C9A = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					D9E8FE8E2A96A2DC00DA4309 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = D972464A2A5F467200005C9A;
 					};
 				};
 			};
@@ -268,6 +317,7 @@
 			projectRoot = "";
 			targets = (
 				D972464A2A5F467200005C9A /* Grind Tasks */,
+				D9E8FE8E2A96A2DC00DA4309 /* Grind TasksTests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +334,13 @@
 				D97246532A5F467200005C9A /* Assets.xcassets in Resources */,
 				D98027FD2A702D9400E41C21 /* Localizable.stringsdict in Resources */,
 				D96CBFE12A88A82C0097B803 /* Launch Screen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E8FE8D2A96A2DC00DA4309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +375,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9E8FE8B2A96A2DC00DA4309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E8FE9A2A96A5D700DA4309 /* AssetTests.swift in Sources */,
+				D9E8FE922A96A2DC00DA4309 /* Grind_TasksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9E8FE942A96A2DC00DA4309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D972464A2A5F467200005C9A /* Grind Tasks */;
+			targetProxy = D9E8FE932A96A2DC00DA4309 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D98027FB2A702B6300E41C21 /* Localizable.strings */ = {
@@ -540,6 +614,47 @@
 			};
 			name = Release;
 		};
+		D9E8FE962A96A2DC00DA4309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GH5DSAP7H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethanphillips.Grind-TasksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grind Tasks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Grind Tasks";
+			};
+			name = Debug;
+		};
+		D9E8FE972A96A2DC00DA4309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GH5DSAP7H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethanphillips.Grind-TasksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grind Tasks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Grind Tasks";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +672,15 @@
 			buildConfigurations = (
 				D972465B2A5F467200005C9A /* Debug */,
 				D972465C2A5F467200005C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9E8FE952A96A2DC00DA4309 /* Build configuration list for PBXNativeTarget "Grind TasksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E8FE962A96A2DC00DA4309 /* Debug */,
+				D9E8FE972A96A2DC00DA4309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
