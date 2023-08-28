@@ -36,7 +36,6 @@ struct TaskRowView: View {
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
-
                 Spacer()
 
                 VStack(alignment: .trailing) {
@@ -50,7 +49,6 @@ struct TaskRowView: View {
                 }
                 .foregroundStyle(.secondary)
             }
-            
         }
         .onAppear {
             let currentDate = Date()
