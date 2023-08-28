@@ -15,6 +15,8 @@ struct Filter: Identifiable, Hashable {
     var minAssignedDate = Date.distantPast
     var tag: Tag?
     
+    
+    
     var activeTasksCount: Int {
         tag?.tagActiveTasks.count ?? 0
     }
@@ -23,6 +25,7 @@ struct Filter: Identifiable, Hashable {
         id: UUID(),
         name: "All Tasks",
         icon: "tray")
+        
     static var recent = Filter(
         id: UUID(),
         name: "Recent Tasks",

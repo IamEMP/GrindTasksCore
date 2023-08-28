@@ -37,6 +37,8 @@
 		D9B30EAF2A6DC0490091831D /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B30EAE2A6DC0490091831D /* Bundle-Decodable.swift */; };
 		D9E8FE922A96A2DC00DA4309 /* Grind_TasksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E8FE912A96A2DC00DA4309 /* Grind_TasksTests.swift */; };
 		D9E8FE9A2A96A5D700DA4309 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E8FE992A96A5D700DA4309 /* AssetTests.swift */; };
+		D9EF60B32A9CCD9F005C17B3 /* TagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EF60B22A9CCD9F005C17B3 /* TagTests.swift */; };
+		D9EF60B52A9CD16E005C17B3 /* AwardsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EF60B42A9CD16E005C17B3 /* AwardsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		D9E8FE912A96A2DC00DA4309 /* Grind_TasksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grind_TasksTests.swift; sourceTree = "<group>"; };
 		D9E8FE982A96A44500DA4309 /* Grind Tasks.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Grind Tasks.xctestplan"; sourceTree = "<group>"; };
 		D9E8FE992A96A5D700DA4309 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
+		D9EF60B22A9CCD9F005C17B3 /* TagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
+		D9EF60B42A9CD16E005C17B3 /* AwardsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,8 @@
 				D9E8FE982A96A44500DA4309 /* Grind Tasks.xctestplan */,
 				D9E8FE912A96A2DC00DA4309 /* Grind_TasksTests.swift */,
 				D9E8FE992A96A5D700DA4309 /* AssetTests.swift */,
+				D9EF60B22A9CCD9F005C17B3 /* TagTests.swift */,
+				D9EF60B42A9CD16E005C17B3 /* AwardsTest.swift */,
 			);
 			path = "Grind TasksTests";
 			sourceTree = "<group>";
@@ -380,6 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9E8FE9A2A96A5D700DA4309 /* AssetTests.swift in Sources */,
+				D9EF60B52A9CD16E005C17B3 /* AwardsTest.swift in Sources */,
+				D9EF60B32A9CCD9F005C17B3 /* TagTests.swift in Sources */,
 				D9E8FE922A96A2DC00DA4309 /* Grind_TasksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
