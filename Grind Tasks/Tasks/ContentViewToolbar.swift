@@ -38,5 +38,6 @@ struct ContentViewToolbar: View {
 struct ContentViewToolbar_Previews: PreviewProvider {
     static var previews: some View {
         ContentViewToolbar()
+            .environmentObject(DataController.preview)
     }
 }
