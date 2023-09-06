@@ -25,8 +25,6 @@ struct TaskRowView: View {
                         .opacity(0)
                 }
 
-                
-                    
                 VStack(alignment: .leading) {
                     Text(tasks.taskTitle)
                         .font(.headline)

@@ -172,7 +172,7 @@ class DataController: ObservableObject {
     }
     
     /// Runs a fetch request with various predicates that filter the user's tasks based
-    /// on tag, title and content text, search tokens, priority, and completion status.
+    /// on tag, title and content text, search tokens, and completion status.
     /// - Returns: An array of all matching tasks.
     func taskforSelectedFilter() -> [TaskItem] {
         let filter = selectedFilter ?? .all
