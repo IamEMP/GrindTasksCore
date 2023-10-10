@@ -24,7 +24,7 @@ class DataController: ObservableObject {
     @Published var filterText = ""
     @Published var filterTokens = [Tag]()
     @Published var filterEnabled = false
-    @Published var filterStatus = Status.all
+    @Published var filterStatus = Status.incomplete
     @Published var sortNewestFirst = true
     
     private var saveTask: Task<Void, Error>?
