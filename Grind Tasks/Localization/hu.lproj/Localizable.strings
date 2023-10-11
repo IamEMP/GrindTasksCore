@@ -24,6 +24,8 @@
 "Tasks" = "feladat";
 "Create Task" = "feladatok létrehozása";
 
+"No tags" = "Címkétlen";
+
 /* A button that shows a menu with the following options */
 "Filter" = "Szűrő";
 "Turn Filter On" = "Szűrő bekapcsolása"; /* Enables filtering */

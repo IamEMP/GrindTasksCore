@@ -19,6 +19,9 @@ class DataController: ObservableObject {
     
     /// The CloudKit container used to store all our data.
     let container: NSPersistentCloudKitContainer
+    
+    var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
+    
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedTask: TaskItem?
     @Published var filterText = ""
@@ -89,9 +92,22 @@ class DataController: ObservableObject {
             using: remoteStoreChanged
         )
 
-        container.loadPersistentStores { _, error in
+        container.loadPersistentStores { [weak self] _, error in
             if let error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
+            }
+            
+            if let description = self?.container.persistentStoreDescriptions.first {
+                description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+                
+                if let coordinator = self?.container.persistentStoreCoordinator {
+                    self?.spotlightDelegate = NSCoreDataCoreSpotlightDelegate(
+                        forStoreWith: description, 
+                        coordinator: coordinator
+                    )
+                    
+                    self?.spotlightDelegate?.startSpotlightIndexing()
+                }
             }
         }
     }
@@ -257,5 +273,17 @@ class DataController: ObservableObject {
         tag.id = UUID()
         tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
         save()
+    }
+    
+    func task(with uniqueIdentifier: String) -> TaskItem? {
+        guard let url = URL(string: uniqueIdentifier) else {
+            return nil
+        }
+        
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+            return nil
+        }
+        
+        return try? container.viewContext.existingObject(with: id) as? TaskItem
     }
 }
