@@ -35,6 +35,13 @@ struct TaskViewToolbar: View {
             } label: {
                 Label(openCloseButtonText, systemImage: "checkmark.circle")
             }
+            .sensoryFeedback(trigger: task.completed) { oldValue, newValue in
+                if newValue {
+                    .success
+                } else {
+                    nil
+                }
+            }
             Divider()
             
             Section("Tags") {
