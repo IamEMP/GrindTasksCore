@@ -78,7 +78,13 @@
 "Add Tags" = "Add Tags";
 "Basic Information" = "Basic Information";
 "Enter the task description here" = "Enter the task description here";
-"Schedule Notifications" = "Schedule Notifications";
+"Reminder Notifications" = "Reminder Notifications";
+"Reminder time" = "Reminder time";
+
+/* Notifications  */
+"There was a problem setting your notification. Please make sure you have notifications enabled." = "There was a problem setting your notification. Please make sure you have notifications enabled.";
+"Something's Wrong!" = "Something's Wrong!";
+"Check Settings" = "Check Settings";
 
 
 

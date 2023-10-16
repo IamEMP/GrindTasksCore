@@ -11,6 +11,9 @@ struct TaskView: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var task: TaskItem
     
+    @State private var showingNotificationsError = false
+    @Environment(\.openURL) var openURL
+    
     
     var body: some View {
         Form {
@@ -31,11 +34,20 @@ struct TaskView: View {
                             
                     Text("**Status:** \(task.taskStatus)")
                                 .foregroundStyle(.secondary)
-                            
-                    Toggle("Schedule Notifications", isOn: $task.scheduleTime)
                 }
                         
                 TagsMenuView(task: task)
+            }
+            
+            Section("Reminders") {
+                Toggle("Reminder Notifications", isOn: $task.reminderEnabled.animation())
+                
+                if task.reminderEnabled {
+                    DatePicker(
+                        "Reminder time", selection: $task.taskReminderTime,
+                        displayedComponents: .hourAndMinute
+                    )
+                }
             }
                     
             Section {
@@ -55,6 +67,41 @@ struct TaskView: View {
         }
         .toolbar {
             TaskViewToolbar(task: task)
+        }
+        .alert("Something's Wrong!", isPresented: $showingNotificationsError) {
+            Button("Check Settings", action: showAppSettings)
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("There was a problem setting your notification. Please make sure you have notifications enabled.")
+        }
+        .onChange(of: task.reminderEnabled) {
+            updateReminder()
+        }
+        .onChange(of: task.reminderTime) {
+            updateReminder()
+        }
+    }
+    
+    func showAppSettings() {
+        guard let settingsURL = URL(string: UIApplication.openNotificationSettingsURLString) else {
+            return
+        }
+        
+        openURL(settingsURL)
+    }
+    
+    func updateReminder() {
+        dataController.removeReminders(for: task)
+        
+        Task { @MainActor in
+            if task.reminderEnabled {
+                let success = await dataController.addReminder(for: task)
+                
+                if success == false {
+                    task.reminderEnabled = false
+                    showingNotificationsError = true
+                }
+            }
         }
     }
 }

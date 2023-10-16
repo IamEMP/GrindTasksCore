@@ -56,6 +56,11 @@ extension TaskItem {
         }
     }
     
+    var taskReminderTime: Date {
+        get { reminderTime ?? .now }
+        set { reminderTime = newValue }
+    }
+    
     static var example: TaskItem {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
