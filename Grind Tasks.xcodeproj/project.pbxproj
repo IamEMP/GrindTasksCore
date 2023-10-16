@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */; };
 		D91A90242A65A78900EFBE74 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */; };
+		D92875462ADD83DC0008ED2E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92875452ADD83DC0008ED2E /* NotificationController.swift */; };
 		D938450E2A617D760041AE1C /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450D2A617D760041AE1C /* SidebarView.swift */; };
 		D93845102A617DAF0041AE1C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450F2A617DAF0041AE1C /* DetailView.swift */; };
 		D93845122A617EA10041AE1C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93845112A617EA10041AE1C /* Filter.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D92875452ADD83DC0008ED2E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D938450D2A617D760041AE1C /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		D938450F2A617DAF0041AE1C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D93845112A617EA10041AE1C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				D96CBFE02A88A82C0097B803 /* Launch Screen.storyboard */,
+				D92875452ADD83DC0008ED2E /* NotificationController.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				D93845102A617DAF0041AE1C /* DetailView.swift in Sources */,
 				D96CBFDC2A88A2810097B803 /* SmartFilterRow.swift in Sources */,
 				D9472C772A686BCF00BCCF39 /* NoTaskView.swift in Sources */,
+				D92875462ADD83DC0008ED2E /* NotificationController.swift in Sources */,
 				D9991E992A6EB75B00334CA9 /* AwardsView.swift in Sources */,
 				D938450E2A617D760041AE1C /* SidebarView.swift in Sources */,
 				D91A90242A65A78900EFBE74 /* Tag-CoreDataHelpers.swift in Sources */,
