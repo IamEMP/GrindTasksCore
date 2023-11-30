@@ -16,12 +16,6 @@ struct ContentViewToolbar: View {
         }
         
         Menu {
-            Button(dataController.filterEnabled ? "Turn Filter Off" : "Turn Filter On") {
-                dataController.filterEnabled.toggle()
-                
-            }
-            Divider()
-
             Picker("Status", selection: $dataController.filterStatus) {
                 Text("All").tag(Status.all)
                 Text("Incomplete").tag(Status.incomplete)

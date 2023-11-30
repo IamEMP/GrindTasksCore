@@ -58,9 +58,10 @@ extension DataController {
             content.subtitle = taskContent
         }
         
-        let components = Calendar.current.dateComponents([.hour, .minute], from: task.taskReminderTime)
+        let components = Calendar.current.dateComponents([.hour, .minute, .calendar], from: task.taskReminderTime)
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
         
+        // for testing use the trigger below instead of the one in place.
        // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         let id = task.objectID.uriRepresentation().absoluteString

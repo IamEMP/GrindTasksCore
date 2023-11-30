@@ -15,6 +15,7 @@ struct SidebarView: View {
     @State private var renamingTag = false
     @State private var tagName = ""
     @State private var showingAwards = false
+    @State private var tasks: TaskItem?
 
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var tags: FetchedResults<Tag>

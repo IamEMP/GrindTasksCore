@@ -22,7 +22,7 @@ extension TaskItem {
 
     var taskAssignedDate: Date {
         get { assignedDate ?? .now }
-        set { assignedDate = newValue}
+        set { assignedDate = newValue }
     }
     
     var taskScheduleTime: Bool {
