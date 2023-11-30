@@ -23,7 +23,7 @@ struct Filter: Identifiable, Hashable {
     
     static var all = Filter(
         id: UUID(),
-        name: "All Tasks",
+        name: "Current Tasks",
         icon: "tray")
         
     static var recent = Filter(
@@ -31,6 +31,11 @@ struct Filter: Identifiable, Hashable {
         name: "Recent Tasks",
         icon: "clock",
         minAssignedDate: .now.addingTimeInterval(86400 * -7))
+    
+    static var completed = Filter(
+        id: UUID(),
+        name: "Completed Tasks",
+        icon: "checkmark")
     
     
     func hash(into hasher: inout Hasher) {

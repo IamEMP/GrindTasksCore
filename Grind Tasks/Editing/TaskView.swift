@@ -40,12 +40,11 @@ struct TaskView: View {
             }
             
             Section("Reminders") {
-                Toggle("Reminder Notifications", isOn: $task.reminderEnabled.animation())
+                Toggle("Daily Notifications", isOn: $task.reminderEnabled.animation())
                 
                 if task.reminderEnabled {
                     DatePicker(
-                        "Reminder time", selection: $task.taskReminderTime,
-                        displayedComponents: .hourAndMinute
+                        "Reminder time", selection: $task.taskReminderTime
                     )
                 }
             }
