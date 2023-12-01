@@ -68,7 +68,11 @@ struct TaskView: View {
             TaskViewToolbar(task: task)
         }
         .alert("Something's Wrong!", isPresented: $showingNotificationsError) {
+            #if os(iOS)
             Button("Check Settings", action: showAppSettings)
+            #elseif os(macOS)
+            Text("To enable notifications for this app open settings > notifications > then toggle Grind Tasks to ON.")
+            #endif
             Button("Cancel", role: .cancel) {}
         } message: {
             Text("There was a problem setting your notification. Please make sure you have notifications enabled.")
@@ -80,14 +84,14 @@ struct TaskView: View {
             updateReminder()
         }
     }
-    
+#if os(iOS)
     func showAppSettings() {
         guard let settingsURL = URL(string: UIApplication.openNotificationSettingsURLString) else {
             return
         }
         
         openURL(settingsURL)
-    }
+    } #endif
     
     func updateReminder() {
         dataController.removeReminders(for: task)
