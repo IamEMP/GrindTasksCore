@@ -18,13 +18,25 @@ struct TaskViewToolbar: View {
     var body: some View {
         Menu {
             Button {
+            #if iOS
                 UIPasteboard.general.string = task.title
+            #endif
+            #if macOS
+                NSPasteboard.general.clearContents()
+                NSPasteboard.general.setString(task.title, forType: .string)
+            #endif
             } label: {
                 Label("Copy Task Title", systemImage: "doc.on.doc")
             }
             
             Button {
-                UIPasteboard.general.string = task.content
+            #if iOS
+            UIPasteboard.general.string = task.content
+            #endif
+            #if macOS
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(task.content, forType: .string)
+            #endif
             } label: {
                 Label("Copy Task Description", systemImage: "doc.on.doc")
             }
