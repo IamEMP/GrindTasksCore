@@ -33,7 +33,6 @@ class DataController: ObservableObject {
     private var saveTask: Task<Void, Error>?
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
-        dataController.createSampleData()
         return dataController
     }()
     var suggestedFilterTokens: [Tag] {
@@ -113,24 +112,6 @@ class DataController: ObservableObject {
     }
     func remoteStoreChanged(_ notification: Notification) {
         objectWillChange.send()
-    }
-    func createSampleData() {
-        let viewContext = container.viewContext
-        for tagCounter in 1...5 {
-            let tag = Tag(context: viewContext)
-            tag.id = UUID()
-            tag.name = "Tag \(tagCounter)"
-            for taskCounter in 1...10 {
-                let task = TaskItem(context: viewContext)
-                task.title = "Task \(tagCounter) - \(taskCounter)"
-                task.assignedDate = .now
-                task.content = "Description for tasks goes here!"
-                task.completed = false
-                task.scheduleTime = Bool.random()
-                tag.addToTasks(task)
-            }
-        }
-        try? viewContext.save()
     }
     
     /// Saves our Core Data context iff there are changes. This silently ignores

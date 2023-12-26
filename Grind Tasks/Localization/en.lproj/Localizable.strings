@@ -13,6 +13,9 @@
 "Delete" = "Delete";
 "Rename" = "Rename";
 "Actions" = "Actions";
+"Description" = "Description";
+"Reminders" = "Reminders";
+"Title" = "Title";
 
 
 
@@ -24,6 +27,7 @@
 "Tags" = "Tags";
 "Add tag" = "Add tag";
 "Show awards" = "Show awards";
+"Create Task" = "Create Task";
 
 "Rename tag" = "Rename tag";
 "New name" = "New name";
@@ -56,6 +60,7 @@
 
 /* Shown as a status for closed tasks */
 "COMPLETED" = "COMPLETED";
+"Status" = "Status";
 
 
 
@@ -64,12 +69,16 @@
 
 /* NOTASKVIEW */
 "No Task Selected" = "No Task Selected";
+"No Tasks Selected" = "No Tasks Selected";
 
 /* TASKVIEW */
 "Copy Task Title" = "Copy Task Title";
 "Copy Task Description" = "Copy Task Description";
 "Complete Task" = "Complete Task";
 "Re-open Task" = "Re-open Task";
+"Current Tasks" = "Current Tasks";
+"Task Due By" = "Task Due By";
+"Task due by" = "Task due by";
 
 /* Fields that let the users enter details about a specific task */
 "Enter the issue title here" = "Enter the issue title here";

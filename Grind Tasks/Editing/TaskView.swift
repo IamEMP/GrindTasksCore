@@ -25,6 +25,9 @@ struct TaskView: View {
                         prompt: Text("Enter the task title here")
                     )
                                 .font(.title)
+                    #if os(macOS)
+                                .frame(width: 450)
+                    #endif
                             
                     DatePicker(
                         "Task due by",
@@ -56,6 +59,9 @@ struct TaskView: View {
                         .foregroundStyle(.secondary)
                             
                     TextField("Description", text: $task.taskContent, prompt: Text("Enter the task description here"), axis: .vertical)
+                    #if os(macOS)
+                        .frame(width: 500)
+                    #endif
                 }
             }
         }
