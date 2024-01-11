@@ -28,7 +28,7 @@ struct ContentView: View {
                 .searchable(text: $dataController.filterText,
                             tokens: $dataController.filterTokens,
                             suggestedTokens: .constant(dataController.suggestedFilterTokens),
-                            prompt: "Search tasks, or type # to filter by tags") { tag in
+                            prompt: "Search tasks...") { tag in
                     Text(tag.tagName)
                 }
                 .toolbar(content: ContentViewToolbar.init)

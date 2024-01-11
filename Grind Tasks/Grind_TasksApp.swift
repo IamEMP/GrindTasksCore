@@ -30,8 +30,8 @@ struct Grind_TasksApp: App {
                 }
             }
             .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
-            
         }
+
     }
     func loadSpotlightItem(_ userActivity: NSUserActivity) {
         if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {

@@ -16,6 +16,7 @@
 "Description" = "Description";
 "Reminders" = "Reminders";
 "Title" = "Title";
+"Close" = "Close";
 
 
 
@@ -55,7 +56,7 @@
 "New Task" = "New Task";
 
 /* A text placeholder, to help users search */
-"Search tasks, or type # to filter by tags" = "Search tasks, or type # to filter by tags";
+"Search tasks..." = "Search tasks...";
 "Enter the task title here" = "Enter the task title here";
 
 /* Shown as a status for closed tasks */
