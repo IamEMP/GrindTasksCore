@@ -12,7 +12,8 @@ struct AwardsView: View {
     
     @State private var selectedAward = Award.example
     @State private var showingAwardDetails = false
-
+   
+    @Environment(\.dismiss) private var dismiss
     
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
@@ -42,11 +43,22 @@ struct AwardsView: View {
                 }
             }
             .navigationTitle("Awards")
+            
+            Button("Close") {
+                dismiss()
+            }
+            .padding()
+            
         }
         .alert(awardTitle, isPresented: $showingAwardDetails) {
         } message: {
             Text(selectedAward.description)
         }
+        #if os(macOS)
+        .frame(minWidth: 100, idealWidth: 500, maxWidth: 1000,
+               minHeight: 100, idealHeight: 550, maxHeight: 1000,
+               alignment: .center)
+        #endif
     }
     
     var awardTitle: String {
