@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9123EBC2B61BE51009CD233 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9123EBB2B61BE51009CD233 /* DataController-StoreKit.swift */; };
 		D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */; };
 		D91A90242A65A78900EFBE74 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */; };
 		D92875462ADD83DC0008ED2E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92875452ADD83DC0008ED2E /* NotificationController.swift */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D9123EBA2B61B954009CD233 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		D9123EBB2B61BE51009CD233 /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
 		D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D92875452ADD83DC0008ED2E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		D95EC2EE2A96361E00C68792 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D9123EBA2B61B954009CD233 /* Configuration.storekit */,
 				D97246602A5F47A500005C9A /* Main.xcdatamodeld */,
 				D97246652A60551300005C9A /* Grind-Tasks-Info.plist */,
 				D97246542A5F467200005C9A /* Grind_Tasks.entitlements */,
@@ -228,6 +232,7 @@
 				D95EC2ED2A96359E00C68792 /* Extensions */,
 				D96CBFDF2A88A8010097B803 /* Resources */,
 				D95EC2F62A963C9C00C68792 /* DataController.swift */,
+				D9123EBB2B61BE51009CD233 /* DataController-StoreKit.swift */,
 				D972464E2A5F467200005C9A /* Grind_TasksApp.swift */,
 				D95EC2EF2A96388300C68792 /* Localization */,
 				D9991E9C2A6EBD1800334CA9 /* Colors.xcassets */,
@@ -371,6 +376,7 @@
 				D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */,
 				D9A02FBB2A65D50A007ABF2B /* TaskRowView.swift in Sources */,
 				D9472C752A686BC600BCCF39 /* TaskView.swift in Sources */,
+				D9123EBC2B61BE51009CD233 /* DataController-StoreKit.swift in Sources */,
 				D97246622A5F47A500005C9A /* Main.xcdatamodeld in Sources */,
 				D95EC2F72A963C9C00C68792 /* DataController.swift in Sources */,
 				D96CBFD62A889C7B0097B803 /* TaskViewToolbar.swift in Sources */,
@@ -602,7 +608,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ethanphillips.Grind-Tasks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethanphillips.GrindTasksCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
@@ -645,7 +651,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ethanphillips.Grind-Tasks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethanphillips.GrindTasksCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
