@@ -30,6 +30,7 @@ class DataController: ObservableObject {
     @Published var filterStatus = Status.incomplete
     @Published var sortNewestFirst = true
     
+    private var storeTask: Task<Void, Never>?
     private var saveTask: Task<Void, Error>?
     
     // The UserDefaults suite where we are saving user data.
@@ -73,6 +74,10 @@ class DataController: ObservableObject {
     init(inMemory: Bool = false, defaults: UserDefaults = .standard) {
         self.defaults = defaults
         container = NSPersistentCloudKitContainer(name: "Main")
+        
+        storeTask = Task {
+            await monitorTransaction()
+        }
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
@@ -255,11 +260,22 @@ class DataController: ObservableObject {
             return false
         }
     }
-    func newTag() {
+    func newTag() -> Bool {
+        var shouldCreate = fullVersionUnlocked
+        
+        if shouldCreate == false {
+            shouldCreate = count(for: Tag.fetchRequest()) < 3
+        }
+        
+        guard shouldCreate else {
+            return false
+        }
+        
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
         tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
         save()
+        return true
     }
     
     func task(with uniqueIdentifier: String) -> TaskItem? {
