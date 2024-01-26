@@ -21,4 +21,38 @@ extension DataController {
             defaults.set(newValue, forKey: "fullVersionUnlocked")
         }
     }
+    
+    func monitorTransaction() async {
+        // Check for previous purchases.
+        for await entitlement in Transaction.currentEntitlements {
+            if case let .verified(transaction) = entitlement {
+                await finalize(transaction)
+            }
+        }
+        
+        // watch for future transactions coming in.
+        for await update in Transaction.updates {
+            if let transaction = try? update.payloadValue {
+                await finalize(transaction)
+            }
+        }
+    }
+    
+    func purchase(_ product: Product) async throws {
+        let result = try await product.purchase()
+        
+        if case let .success(validation) = result {
+            try await finalize(validation.payloadValue)
+        }
+    }
+    
+    @MainActor
+    func finalize(_ transaction: Transaction) async {
+        if transaction.productID == Self.proUnlockProductID {
+            objectWillChange.send()
+            fullVersionUnlocked = transaction.revocationDate == nil
+            await transaction.finish()
+        }
+    }
+    
 }
