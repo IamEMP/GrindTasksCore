@@ -23,7 +23,9 @@ struct StoreView: View {
                     Text(product.description)
                     
                     Button("Buy Now") {
+                        #if os(macOS) || os(iOS)
                         purchase(product)
+                        #endif
                     }
                     .buttonStyle(.bordered)
                     .buttonBorderShape(.capsule)
@@ -44,12 +46,14 @@ struct StoreView: View {
             dismiss()
         }
     }
+    #if os(macOS) || os(iOS)
     
     func purchase(_ product: Product) {
         Task { @MainActor in
             try await dataController.purchase(product)
         }
     }
+    #endif
     
     func load() async {
         do {
