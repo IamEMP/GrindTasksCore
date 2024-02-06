@@ -31,7 +31,16 @@ struct ContentView: View {
                             prompt: "Search tasks...") { tag in
                     Text(tag.tagName)
                 }
-                .toolbar(content: ContentViewToolbar.init)
+        #if os(macOS) || os(iOS)
+                            .toolbar {
+                                    ContentViewToolbar.init()
+                            }
+        #else 
+                            .ornament(attachmentAnchor: .scene(.top)) {
+                                ContentViewToolbar.init()
+                                    .glassBackgroundEffect()
+                            }
+        #endif
             }
     
     func delete(_ offsets: IndexSet) {

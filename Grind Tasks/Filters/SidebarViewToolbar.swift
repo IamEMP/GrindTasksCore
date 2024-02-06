@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import RealityKit
+
 
 struct SidebarViewToolbar: View {
     @EnvironmentObject var dataController: DataController
@@ -23,6 +25,7 @@ struct SidebarViewToolbar: View {
         } label: {
             Label("Show awards", systemImage: "rosette")
         }
+        
     }
     
     func tryNewTag() {

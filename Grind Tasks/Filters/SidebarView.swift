@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealityKit
 
 struct SidebarView: View {
     @EnvironmentObject var dataController: DataController
@@ -44,7 +45,7 @@ struct SidebarView: View {
 #endif
                 }
                 .toolbar {
-                    SidebarViewToolbar(showingAwards: $showingAwards)
+                        SidebarViewToolbar(showingAwards: $showingAwards)
                 }
                 .alert("Rename tag", isPresented: $renamingTag) {
                     Button("OK", action: completeRename)

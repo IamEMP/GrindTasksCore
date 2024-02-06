@@ -70,6 +70,7 @@
 		D94250912B6458B500F467DB /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		D9472C742A686BC600BCCF39 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		D9472C762A686BCF00BCCF39 /* NoTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTaskView.swift; sourceTree = "<group>"; };
+		D9503C652B6AED2B00E1F9C4 /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/RealityKit.framework; sourceTree = DEVELOPER_DIR; };
 		D95EC2F62A963C9C00C68792 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D96CBFD32A889A790097B803 /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
 		D96CBFD52A889C7B0097B803 /* TaskViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewToolbar.swift; sourceTree = "<group>"; };
@@ -129,6 +130,14 @@
 				D94250912B6458B500F467DB /* StoreView.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		D9503C642B6AECED00E1F9C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9503C652B6AED2B00E1F9C4 /* RealityKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D95EC2ED2A96359E00C68792 /* Extensions */ = {
@@ -219,6 +228,7 @@
 				D972464D2A5F467200005C9A /* Grind Tasks */,
 				D9E8FE902A96A2DC00DA4309 /* Grind TasksTests */,
 				D972464C2A5F467200005C9A /* Products */,
+				D9503C642B6AECED00E1F9C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -623,8 +633,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethanphillips.GrindTasksCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -666,8 +676,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethanphillips.GrindTasksCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

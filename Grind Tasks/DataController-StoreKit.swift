@@ -8,6 +8,7 @@
 import Foundation
 import StoreKit
 
+
 extension DataController {
     /// Product ID for unlocking the pro version of the app.
     static let proUnlockProductID = "com.ethanphillips.GrindTasksCore.proUnlock"
@@ -37,7 +38,7 @@ extension DataController {
             }
         }
     }
-    
+    #if os(macOS) || os(iOS)
     func purchase(_ product: Product) async throws {
         let result = try await product.purchase()
         
@@ -45,6 +46,7 @@ extension DataController {
             try await finalize(validation.payloadValue)
         }
     }
+    #endif
     
     @MainActor
     func finalize(_ transaction: Transaction) async {
