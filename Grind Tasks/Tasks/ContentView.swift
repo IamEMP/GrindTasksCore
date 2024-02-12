@@ -9,21 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var dataController: DataController
+    @State private var showingThemes = false
     
     var body: some View {
- 
+        ZStack {
+            
+            VStack {
                 List(selection: $dataController.selectedTask) {
                     ForEach(dataController.taskforSelectedFilter()) { task in
                         TaskRowView(tasks: task)
                     }
                     .onDelete(perform: delete)
 #if os(iOS)
-                    .listRowBackground(Color(.systemBlue).opacity(0.4))
+                   // .listRowBackground(LinearGradient(colors: [.white, .cyan,], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .listRowBackground(Color(dataController.themeColor))
+                    .listRowInsets(.init(top: 15, leading: 15, bottom: 15, trailing: 15))
+                    .listRowSpacing(20)
+                    .listRowSeparatorTint(.white, edges: .all)
 #endif
                 }
 #if os(iOS)
                 .listStyle(.insetGrouped)
 #endif
+                Button(action: dataController.newTask) {
+                    Label("New Task", systemImage: "plus")
+                }
+                .tint(.lightBlue)
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.circle)
+                .shadow(radius: 20)
+                .controlSize(.extraLarge)
+                
                 .navigationTitle("Tasks")
                 .searchable(text: $dataController.filterText,
                             tokens: $dataController.filterTokens,
@@ -31,17 +47,24 @@ struct ContentView: View {
                             prompt: "Search tasks...") { tag in
                     Text(tag.tagName)
                 }
-        #if os(macOS) || os(iOS)
+                            .sheet(isPresented: $showingThemes, content: ThemeView.init)
+                            .onAppear(perform: {
+                                dataController.loadTheme()
+                            })
+#if os(macOS) || os(iOS)
                             .toolbar {
-                                    ContentViewToolbar.init()
+                                ContentViewToolbar.init(showingThemes: $showingThemes)
                             }
-        #else 
+#else
                             .ornament(attachmentAnchor: .scene(.top)) {
                                 ContentViewToolbar.init()
                                     .glassBackgroundEffect()
                             }
-        #endif
+#endif
             }
+            .background(.ultraThinMaterial)
+        }
+    }
     
     func delete(_ offsets: IndexSet) {
         let tasks = dataController.taskforSelectedFilter()

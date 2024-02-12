@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 enum Status {
     case all, incomplete, completed, scheduled
@@ -29,6 +30,8 @@ class DataController: ObservableObject {
     @Published var filterEnabled = true
     @Published var filterStatus = Status.incomplete
     @Published var sortNewestFirst = true
+    
+    @Published var themeColor = Color.blue
     
     private var storeTask: Task<Void, Never>?
     private var saveTask: Task<Void, Error>?
@@ -288,5 +291,14 @@ class DataController: ObservableObject {
         }
         
         return try? container.viewContext.existingObject(with: id) as? TaskItem
+    }
+    
+    func loadTheme() {
+        let savedTheme = defaults.string(forKey: "themeColor")
+        
+        
+    }
+    func themeSave() {
+        defaults.set(themeColor, forKey: "themeColor")
     }
 }
