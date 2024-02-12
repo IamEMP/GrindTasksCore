@@ -17,7 +17,9 @@
 "Reminders" = "Reminders";
 "Title" = "Title";
 "Close" = "Close";
-
+"Save" = "Save";
+"Load" = "Load";
+"Load Save" = "Load Save";
 
 
 /* SIDEBARVIEW */
@@ -115,4 +117,11 @@
 
 /* STORE KIT */
 "Buy Now" = "Buy Now";
+
+/* THEMES */
+"Theme Color" = "Theme Color";
+"Themes" = "Themes";
+"Color 1" = "Color 1";
+"Color 2" = "Color 2";
+
 

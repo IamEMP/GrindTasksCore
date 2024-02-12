@@ -10,10 +10,14 @@ import SwiftUI
 struct ContentViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     
+    @Binding var showingThemes: Bool
+    
     var body: some View {
         HStack {
-            Button(action: dataController.newTask) {
-                Label("New Task", systemImage: "square.and.pencil")
+            Button {
+                showingThemes.toggle()
+            } label: {
+                Label("Themes", systemImage: "paintpalette")
             }
             
             Menu {
@@ -33,7 +37,7 @@ struct ContentViewToolbar: View {
 
 struct ContentViewToolbar_Previews: PreviewProvider {
     static var previews: some View {
-        ContentViewToolbar()
+        ContentViewToolbar(showingThemes: .constant(true))
             .environmentObject(DataController.preview)
     }
 }
