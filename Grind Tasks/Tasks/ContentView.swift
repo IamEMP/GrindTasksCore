@@ -21,8 +21,8 @@ struct ContentView: View {
                     }
                     .onDelete(perform: delete)
 #if os(iOS)
-                   // .listRowBackground(LinearGradient(colors: [.white, .cyan,], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .listRowBackground(Color(dataController.themeColor))
+                    .listRowBackground(LinearGradient(colors: [dataController.storedColor, dataController.storedColor2,], startPoint: .topLeading, endPoint: .bottomTrailing))
+                   // .listRowBackground(Color(dataController.storedColor))
                     .listRowInsets(.init(top: 15, leading: 15, bottom: 15, trailing: 15))
                     .listRowSpacing(20)
                     .listRowSeparatorTint(.white, edges: .all)
@@ -47,7 +47,9 @@ struct ContentView: View {
                             prompt: "Search tasks...") { tag in
                     Text(tag.tagName)
                 }
+                #if os(iOS)
                             .sheet(isPresented: $showingThemes, content: ThemeView.init)
+                #endif
                             .onAppear(perform: {
                                 dataController.loadTheme()
                             })
@@ -62,7 +64,7 @@ struct ContentView: View {
                             }
 #endif
             }
-            .background(.ultraThinMaterial)
+            .background(.ultraThinMaterial.opacity(1))
         }
     }
     

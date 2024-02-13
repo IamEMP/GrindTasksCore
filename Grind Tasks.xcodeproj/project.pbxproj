@@ -10,6 +10,7 @@
 		D9123EBC2B61BE51009CD233 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9123EBB2B61BE51009CD233 /* DataController-StoreKit.swift */; };
 		D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */; };
 		D91A90242A65A78900EFBE74 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */; };
+		D92491C42B7BD42E00E4C31E /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92491C32B7BD42E00E4C31E /* ThemeExtensions.swift */; };
 		D92875462ADD83DC0008ED2E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92875452ADD83DC0008ED2E /* NotificationController.swift */; };
 		D938450E2A617D760041AE1C /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450D2A617D760041AE1C /* SidebarView.swift */; };
 		D93845102A617DAF0041AE1C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938450F2A617DAF0041AE1C /* DetailView.swift */; };
@@ -62,6 +63,7 @@
 		D9123EBB2B61BE51009CD233 /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
 		D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D92491C32B7BD42E00E4C31E /* ThemeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExtensions.swift; sourceTree = "<group>"; };
 		D92875452ADD83DC0008ED2E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D938450D2A617D760041AE1C /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		D938450F2A617DAF0041AE1C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				D9B30EAE2A6DC0490091831D /* Bundle-Decodable.swift */,
 				D91A90212A659AD100EFBE74 /* Task-CoreDataHelpers.swift */,
 				D91A90232A65A78900EFBE74 /* Tag-CoreDataHelpers.swift */,
+				D92491C32B7BD42E00E4C31E /* ThemeExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				D96CBFDA2A889F4E0097B803 /* TagsMenuView.swift in Sources */,
 				D93845122A617EA10041AE1C /* Filter.swift in Sources */,
 				D96CBFD82A889D630097B803 /* ContentViewToolbar.swift in Sources */,
+				D92491C42B7BD42E00E4C31E /* ThemeExtensions.swift in Sources */,
 				D91A90222A659AD100EFBE74 /* Task-CoreDataHelpers.swift in Sources */,
 				D9A02FBB2A65D50A007ABF2B /* TaskRowView.swift in Sources */,
 				D9472C752A686BC600BCCF39 /* TaskView.swift in Sources */,

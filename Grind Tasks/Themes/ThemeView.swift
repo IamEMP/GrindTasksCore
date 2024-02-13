@@ -6,28 +6,35 @@
 //
 
 import SwiftUI
-
+#if os(iOS)
 struct ThemeView: View {
     @EnvironmentObject var dataController: DataController
     
+    
     var body: some View {
-        ColorPicker("Theme Color", selection: $dataController.themeColor)
-        
-            .padding(100)
-        
-        Button("Save") {
+        VStack {
+            Text("Custom Theme")
+                .font(.largeTitle)
+                
             
+                Divider()
+                
+            
+            ColorPicker("Theme Color", selection: $dataController.storedColor)
+                .padding(.horizontal)
+                .font(.title2)
+                
+            
+            ColorPicker("Second Color", selection: $dataController.storedColor2)
+                .padding()
+                .font(.title2)
+                
         }
-        .buttonBorderShape(.capsule)
-        .buttonStyle(.borderedProminent)
     }
-    
-
-    
-
 }
 
 #Preview {
     ThemeView()
         .environmentObject(DataController.preview)
 }
+#endif

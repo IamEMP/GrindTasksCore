@@ -32,7 +32,7 @@ struct SidebarView: View {
                             ForEach(smartFilters, content: SmartFilterRow.init)
                     }
 #if os(iOS)
-                    .listRowBackground(Color(.systemBlue).opacity(0.4))
+                    .listRowBackground(LinearGradient(colors: [dataController.storedColor, dataController.storedColor2,], startPoint: .topLeading, endPoint: .bottomTrailing))
 #endif
                     Section("Tags") {
                         ForEach(tagFilters) { filter in
@@ -41,7 +41,7 @@ struct SidebarView: View {
                         .onDelete(perform: delete)
                     }
 #if os(iOS)
-                    .listRowBackground(Color(.systemBlue).opacity(0.4))
+                    .listRowBackground(LinearGradient(colors: [dataController.storedColor, dataController.storedColor2,], startPoint: .topLeading, endPoint: .bottomTrailing))
 #endif
                 }
                 .toolbar {

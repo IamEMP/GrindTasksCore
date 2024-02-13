@@ -28,6 +28,9 @@ extension TaskItem {
     var taskScheduleTime: Bool {
         scheduleTime
     }
+    var taskGradient: Bool {
+        gradientEnabled
+    }
     
     var taskTags: [Tag] {
         let result = tags?.allObjects as? [Tag] ?? []
