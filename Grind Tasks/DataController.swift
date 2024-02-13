@@ -31,6 +31,12 @@ class DataController: ObservableObject {
     @Published var filterStatus = Status.incomplete
     @Published var sortNewestFirst = true
     
+    #if os(iOS)
+    @AppStorage("colorKey") var storedColor: Color = .clear
+    @AppStorage("colorKey2") var storedColor2: Color = .clear
+
+    #endif
+    
     @Published var themeColor = Color.blue
     
     private var storeTask: Task<Void, Never>?
