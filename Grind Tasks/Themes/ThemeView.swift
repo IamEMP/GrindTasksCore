@@ -25,10 +25,18 @@ struct ThemeView: View {
                 .font(.title2)
                 
             
-            ColorPicker("Second Color", selection: $dataController.storedColor2)
+            ColorPicker("Accent Color", selection: $dataController.storedColor2)
                 .padding()
                 .font(.title2)
-                
+            
+            Button {
+                dataController.storedColor = Color(.clear)
+                dataController.storedColor2 = Color(.clear)
+            } label: {
+                Text("Reset Defaults")
+            }
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
         }
     }
 }

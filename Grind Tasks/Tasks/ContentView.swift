@@ -50,9 +50,7 @@ struct ContentView: View {
                 #if os(iOS)
                             .sheet(isPresented: $showingThemes, content: ThemeView.init)
                 #endif
-                            .onAppear(perform: {
-                                dataController.loadTheme()
-                            })
+                
 #if os(macOS) || os(iOS)
                             .toolbar {
                                 ContentViewToolbar.init(showingThemes: $showingThemes)

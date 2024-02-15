@@ -37,8 +37,6 @@ class DataController: ObservableObject {
 
     #endif
     
-    @Published var themeColor = Color.blue
-    
     private var storeTask: Task<Void, Never>?
     private var saveTask: Task<Void, Error>?
     
@@ -299,12 +297,4 @@ class DataController: ObservableObject {
         return try? container.viewContext.existingObject(with: id) as? TaskItem
     }
     
-    func loadTheme() {
-        let savedTheme = defaults.string(forKey: "themeColor")
-        
-        
-    }
-    func themeSave() {
-        defaults.set(themeColor, forKey: "themeColor")
-    }
 }
