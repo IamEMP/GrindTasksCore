@@ -82,9 +82,9 @@ class DataController: ObservableObject {
         self.defaults = defaults
         container = NSPersistentCloudKitContainer(name: "Main")
         
-        storeTask = Task {
-            await monitorTransaction()
-        }
+       // storeTask = Task {
+           // await monitorTransaction()
+        //}
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
@@ -268,7 +268,7 @@ class DataController: ObservableObject {
         }
     }
     func newTag() -> Bool {
-        var shouldCreate = fullVersionUnlocked
+       /* var shouldCreate = fullVersionUnlocked
         
         if shouldCreate == false {
             shouldCreate = count(for: Tag.fetchRequest()) < 3
@@ -277,6 +277,7 @@ class DataController: ObservableObject {
         guard shouldCreate else {
             return false
         }
+        */
         
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()

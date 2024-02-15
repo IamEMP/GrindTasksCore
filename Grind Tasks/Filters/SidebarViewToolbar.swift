@@ -18,7 +18,7 @@ struct SidebarViewToolbar: View {
         Button(action: tryNewTag) {
             Label("Add tag", systemImage: "plus")
         }
-        .sheet(isPresented: $showingStore, content: StoreView.init)
+        //.sheet(isPresented: $showingStore, content: StoreView.init)
         
         Button {
             showingAwards.toggle()

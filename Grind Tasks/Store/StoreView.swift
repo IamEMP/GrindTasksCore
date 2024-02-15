@@ -7,7 +7,7 @@
 
 import SwiftUI
 import StoreKit
-
+/*
 struct StoreView: View {
     @EnvironmentObject var dataController: DataController
     @Environment(\.dismiss) var dismiss
@@ -68,3 +68,4 @@ struct StoreView: View {
     StoreView()
         .environmentObject(DataController.preview)
 }
+*/

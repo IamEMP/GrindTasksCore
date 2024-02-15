@@ -22,7 +22,6 @@ struct ContentView: View {
                     .onDelete(perform: delete)
 #if os(iOS)
                     .listRowBackground(LinearGradient(colors: [dataController.storedColor, dataController.storedColor2,], startPoint: .topLeading, endPoint: .bottomTrailing))
-                   // .listRowBackground(Color(dataController.storedColor))
                     .listRowInsets(.init(top: 15, leading: 15, bottom: 15, trailing: 15))
                     .listRowSpacing(20)
                     .listRowSeparatorTint(.white, edges: .all)
@@ -37,7 +36,7 @@ struct ContentView: View {
                 .tint(.lightBlue)
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.circle)
-                .shadow(radius: 20)
+                .shadow(radius: 10)
                 .controlSize(.extraLarge)
                 
                 .navigationTitle("Tasks")
