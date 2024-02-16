@@ -86,7 +86,7 @@ struct TaskView: View {
         .onChange(of: task.reminderEnabled) {
             updateReminder()
         }
-        .onChange(of: task.reminderTime) {
+        .onChange(of: task.taskReminderTime) {
             updateReminder()
         }
     }

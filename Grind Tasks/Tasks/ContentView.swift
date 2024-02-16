@@ -56,7 +56,7 @@ struct ContentView: View {
                             }
 #else
                             .ornament(attachmentAnchor: .scene(.top)) {
-                                ContentViewToolbar.init()
+                                ContentViewToolbar.init(showingThemes: $showingThemes)
                                     .glassBackgroundEffect()
                             }
 #endif
