@@ -41,17 +41,6 @@ struct TaskView: View {
                         
                 TagsMenuView(task: task)
             }
-            
-            Section("Reminders") {
-                Toggle("Daily Notifications", isOn: $task.reminderEnabled.animation())
-                
-                if task.reminderEnabled {
-                    DatePicker(
-                        "Reminder time", selection: $task.taskReminderTime
-                    )
-                }
-            }
-                    
             Section {
                 VStack(alignment: .leading) {
                     Text("Basic Information")
@@ -64,6 +53,18 @@ struct TaskView: View {
                     #endif
                 }
             }
+            
+            Section("Reminders") {
+                Toggle("Daily Notifications", isOn: $task.reminderEnabled.animation())
+                
+                if task.reminderEnabled {
+                    DatePicker(
+                        "Reminder time", selection: $task.taskReminderTime
+                    )
+                }
+            }
+                    
+
         }
         .disabled(task.isDeleted)
         .onSubmit(dataController.save)

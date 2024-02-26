@@ -21,7 +21,8 @@ struct ContentView: View {
                     }
                     .onDelete(perform: delete)
 #if os(iOS)
-                    .listRowBackground(LinearGradient(colors: [dataController.storedColor, dataController.storedColor2,], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .listRowBackground(LinearGradient(colors: [dataController.storedColor, dataController.storedColor2,], 
+                                                      startPoint: .topLeading, endPoint: .bottomTrailing))
                     .listRowInsets(.init(top: 15, leading: 15, bottom: 15, trailing: 15))
                     .listRowSpacing(20)
                     .listRowSeparatorTint(.white, edges: .all)
@@ -29,6 +30,7 @@ struct ContentView: View {
                 }
 #if os(iOS)
                 .listStyle(.insetGrouped)
+                .scrollContentBackground(.hidden)
 #endif
                 Button(action: dataController.newTask) {
                     Label("New Task", systemImage: "plus")
@@ -36,7 +38,7 @@ struct ContentView: View {
                 .tint(.lightBlue)
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.circle)
-                .shadow(radius: 10)
+                .shadow(color: .black.opacity(0.5),radius: 5)
                 .controlSize(.extraLarge)
                 
                 .navigationTitle("Tasks")
@@ -54,7 +56,9 @@ struct ContentView: View {
                             .toolbar {
                                 ContentViewToolbar.init(showingThemes: $showingThemes)
                             }
+                            .onOpenURL(perform: openUrl)
 #else
+                            
                             .ornament(attachmentAnchor: .scene(.top)) {
                                 ContentViewToolbar.init(showingThemes: $showingThemes)
                                     .glassBackgroundEffect()
@@ -62,6 +66,12 @@ struct ContentView: View {
 #endif
             }
             .background(.ultraThinMaterial.opacity(1))
+        }
+    }
+    
+    func openUrl(_ url: URL) {
+        if url.absoluteString.contains("newTask") {
+            dataController.newTask()
         }
     }
     
