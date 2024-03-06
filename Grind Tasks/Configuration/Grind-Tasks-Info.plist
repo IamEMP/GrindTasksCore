@@ -15,6 +15,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSUserActivityTypes</key>
+	<array/>
+	<key>NewTaskShortcut</key>
+	<string>com.ethanphillips.GrindTasksCore.newTask</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

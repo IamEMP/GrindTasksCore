@@ -12,7 +12,9 @@ import SwiftUI
 struct Grind_TasksApp: App {
     @StateObject var dataController = DataController()
     @Environment(\.scenePhase) var scenePhase
+    #if os(iOS)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #endif
     
     var body: some Scene {
         WindowGroup {
