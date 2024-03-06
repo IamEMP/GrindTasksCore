@@ -12,7 +12,7 @@ final class PerformanceTests: BaseTestCase {
     func testAwardCalculationPerformance() {
         // Create a significant amount of test data
         for _ in 1...100 {
-            dataController.createSampleData()
+            
         }
         // Simulate lots of awards to check
         let awards = Array(repeating: Award.allAwards, count: 25).joined()

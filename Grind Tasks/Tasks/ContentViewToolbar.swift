@@ -13,12 +13,23 @@ struct ContentViewToolbar: View {
     @Binding var showingThemes: Bool
     
     var body: some View {
+
+        
         HStack {
+            #if os(iOS)
             Button {
                 showingThemes.toggle()
             } label: {
                 Label("Themes", systemImage: "paintpalette")
             }
+            #elseif os(macOS) || os(visionOS)
+            Button {
+                dataController.newTask()
+            } label: {
+                Label("Add Task", systemImage: "plus")
+            }
+            
+            #endif
             
             Menu {
                 Picker("Status", selection: $dataController.filterStatus) {

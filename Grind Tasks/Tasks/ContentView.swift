@@ -11,6 +11,8 @@ struct ContentView: View {
     @EnvironmentObject var dataController: DataController
     @State private var showingThemes = false
     
+    private let newTaskActivity = "com.ethanphillips.GrindTasksCore.newTask"
+    
     var body: some View {
         ZStack {
             
@@ -48,6 +50,7 @@ struct ContentView: View {
                             prompt: "Search tasks...") { tag in
                     Text(tag.tagName)
                 }
+
                 #if os(iOS)
                             .sheet(isPresented: $showingThemes, content: ThemeView.init)
                 #endif
@@ -57,6 +60,11 @@ struct ContentView: View {
                                 ContentViewToolbar.init(showingThemes: $showingThemes)
                             }
                             .onOpenURL(perform: openUrl)
+                            .userActivity(newTaskActivity, { activity in
+                                activity.isEligibleForPrediction = true
+                                activity.title = "New Task"
+                            })
+                            .onContinueUserActivity(newTaskActivity, perform: resumeActivity)
 #else
                             
                             .ornament(attachmentAnchor: .scene(.top)) {
@@ -69,10 +77,16 @@ struct ContentView: View {
         }
     }
     
+
+    
     func openUrl(_ url: URL) {
         if url.absoluteString.contains("newTask") {
             dataController.newTask()
         }
+    }
+    
+    func resumeActivity(_ userActivity: NSUserActivity) {
+        dataController.newTask()
     }
     
     func delete(_ offsets: IndexSet) {
